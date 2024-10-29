@@ -32,6 +32,11 @@ class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Products';
+    }
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
