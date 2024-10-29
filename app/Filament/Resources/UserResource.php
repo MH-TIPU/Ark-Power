@@ -15,6 +15,14 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 use Filament\Tables\Columns\TextColumn;
 
+use Filament\Forms\Components\Select;
+use Illuminate\Support\Facades\Hash;
+use Filament\Forms\Components\TextInput;
+
+use App\Filament\Resources\UserResource\Pages\CreateUser;
+
+use Filament\Resources\Pages\Page;
+
 class UserResource extends Resource
 {
     protected static ?string $model = User::class;
@@ -25,7 +33,34 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+
+                TextInput::make('email')
+                    ->required()
+                    ->maxLength(255),
+
+                TextInput::make('password')
+                    ->password()
+                    ->required(fn (Page $livewire): bool => $livewire instanceof CreateUser)
+                    ->minLength(8)
+                    ->same('passwordConfirmation')
+                    ->dehydrateStateUsing(fn ($state) => !empty($state) ? Hash::make($state) : null)
+                    ->dehydrated(fn ($state) => !empty($state))
+                    ->required(),
+
+                TextInput::make('passwordConfirmation')
+                    ->password()
+                    ->required(fn (Page $livewire): bool => $livewire instanceof CreateUser)
+                    ->minLength(8)
+                    ->dehydrated(false),
+
+                Select::make('roles')
+                    ->relationship('roles', 'name')
+                    ->multiple()
+                    ->preload()
+                    ->searchable()
             ]);
     }
 
@@ -41,6 +76,8 @@ class UserResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
