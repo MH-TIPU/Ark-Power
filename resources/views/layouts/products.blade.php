@@ -12,15 +12,15 @@
                             <div
                                 class="relative bg-clip-border overflow-hidden bg-transparent text-gray-700 shadow-none m-0 rounded-none">
                                 <div class="relative h-44 rounded-lg overflow-hidden"><a
-                                        href="/ProductDetails/6660076d279a46844f5f2e6c"><img
+                                        href="{{ route('productdetails', $product->id) }}"><img
                                             src="{{ asset('storage/' . $product->image) }}" alt="Dhaka Metro TVM"
                                             class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"></a>
                                 </div>
                             </div>
                             <div class="p-6">
                                 <div class="py-3"><a class="md:text-xl text-black font-semibold text-sm"
-                                        href="/ProductDetails/6660076d279a46844f5f2e6c">{{ $product->name }}</a></div>
-                                <div><a href="/ProductDetails/6660076d279a46844f5f2e6c">{{ $product->description }}<span
+                                        href="{{ route('productdetails', $product->id) }}">{{ $product->name }}</a></div>
+                                <div><a href="{{ route('productdetails', $product->id) }}">{{ Str::limit($product->description, 100) }}<span
                                             class="text-blue-700 hover:underline">Read more</span></a></div>
                             </div>
                         </div>
