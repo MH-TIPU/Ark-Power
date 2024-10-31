@@ -54,16 +54,19 @@
                             class="text-gray-800 hover:text-blue-500 duration-500">Products</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('news') }}" class="text-gray-800 hover:text-blue-500 duration-500">News & Event</a>
+                        <a href="{{ route('news') }}" class="text-gray-800 hover:text-blue-500 duration-500">News &
+                            Event</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('about') }}" class="text-gray-800 hover:text-blue-500 duration-500">About Us</a>
+                        <a href="{{ route('about') }}" class="text-gray-800 hover:text-blue-500 duration-500">About
+                            Us</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="/contact" class="text-gray-800 hover:text-blue-500 duration-500">Contact</a>
+                        <a href="{{ route('contact') }}"
+                            class="text-gray-800 hover:text-blue-500 duration-500">Contact</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="/career" class="text-gray-800 hover:text-blue-500 duration-500">Career</a>
+                        <a href="{{ route('career') }}" class="text-gray-800 hover:text-blue-500 duration-500">Career</a>
                     </li>
                 </ul>
             </div>

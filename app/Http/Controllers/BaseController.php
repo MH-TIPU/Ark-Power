@@ -46,4 +46,16 @@ class BaseController extends Controller
         $siteData = SiteData::first();
         return view('layouts.aboutus', compact('siteData'));
     }
+
+    public function contactUs()
+    {
+        $siteData = SiteData::first();
+        return view('layouts.contactus', compact('siteData'));
+    }
+
+    public function career()
+    {
+        $siteData = SiteData::first();
+        return view('layouts.career', compact('siteData'));
+    }
 }
