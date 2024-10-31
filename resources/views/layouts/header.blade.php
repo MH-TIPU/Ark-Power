@@ -46,7 +46,8 @@
                         <a href="/" class="text-gray-800 hover:text-blue-500 duration-500">Home</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="/service" class="text-gray-800 hover:text-blue-500 duration-500">Service</a>
+                        <a href="{{ route('service') }}"
+                            class="text-gray-800 hover:text-blue-500 duration-500">Service</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
                         <a href="{{ route('products') }}"

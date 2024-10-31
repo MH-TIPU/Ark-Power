@@ -28,4 +28,10 @@ class BaseController extends Controller
         $data = Product::find($id);
         return view('layouts.productdetails', compact('siteData', 'data'));
     }
+
+    public function service()
+    {
+        $siteData = SiteData::first();
+        return view('layouts.service', compact('siteData'));
+    }
 }
