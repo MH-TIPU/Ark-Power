@@ -46,7 +46,7 @@
                         <a href="/" class="text-gray-800 hover:text-blue-500 duration-500">Home</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('service') }}"
+                        <a href="{{ route('services') }}"
                             class="text-gray-800 hover:text-blue-500 duration-500">Service</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
@@ -54,10 +54,10 @@
                             class="text-gray-800 hover:text-blue-500 duration-500">Products</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="/news-event" class="text-gray-800 hover:text-blue-500 duration-500">News & Event</a>
+                        <a href="{{ route('news') }}" class="text-gray-800 hover:text-blue-500 duration-500">News & Event</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="/about-us" class="text-gray-800 hover:text-blue-500 duration-500">About Us</a>
+                        <a href="{{ route('about') }}" class="text-gray-800 hover:text-blue-500 duration-500">About Us</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
                         <a href="/contact" class="text-gray-800 hover:text-blue-500 duration-500">Contact</a>

@@ -32,6 +32,18 @@ class BaseController extends Controller
     public function service()
     {
         $siteData = SiteData::first();
-        return view('layouts.service', compact('siteData'));
+        return view('layouts.services', compact('siteData'));
+    }
+
+    public function news()
+    {
+        $siteData = SiteData::first();
+        return view('layouts.news', compact('siteData'));
+    }
+
+    public function aboutUs()
+    {
+        $siteData = SiteData::first();
+        return view('layouts.aboutus', compact('siteData'));
     }
 }
