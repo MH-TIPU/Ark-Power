@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\SiteData;
@@ -41,6 +42,12 @@ class BaseController extends Controller
         return view('layouts.news', compact('siteData'));
     }
 
+    public function newsDetails()
+    {
+        $siteData = SiteData::first();
+        return view('layouts.newsdetails', compact('siteData'));
+    }
+
     public function aboutUs()
     {
         $siteData = SiteData::first();
@@ -57,5 +64,11 @@ class BaseController extends Controller
     {
         $siteData = SiteData::first();
         return view('layouts.career', compact('siteData'));
+    }
+
+    public function testModel()
+    {
+        $data = Post::all();
+        dd($data);
     }
 }

@@ -29,7 +29,7 @@
                         <div class="mt-2">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit.Perferendis, eligendi ipsa. Harum, eos volup.....
-                            <a class="text-blue-700 hover:underline" href="/newsDetails/66641be79dfc4a4492fa2eae">Read
+                            <a class="text-blue-700 hover:underline" href="{{ route('newsdetails') }}">Read
                                 Details</a>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         <div class="mt-2">
                             Ark Power Ltd. is a leading power supply distribution
                             company in Bangladesh, committed to delivering.....
-                            <a class="text-blue-700 hover:underline" href="/newsDetails/66f29f5716cc5682d4d35a94">Read
+                            <a class="text-blue-700 hover:underline" href="{{ route('newsdetails') }}">Read
                                 Details</a>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                         <div class="mt-2">
                             Ark Power Ltd. is a leading power supply distribution
                             company in Bangladesh, committed to delivering.....
-                            <a class="text-blue-700 hover:underline" href="/newsDetails/66f29e2f1fbf1e96b1a9bf8e">Read
+                            <a class="text-blue-700 hover:underline" href="{{ route('newsdetails') }}">Read
                                 Details</a>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                         <div class="mt-2">
                             Ark Power Ltd. is a leading power supply distribution
                             company in Bangladesh, committed to delivering.....
-                            <a class="text-blue-700 hover:underline" href="/newsDetails/66f29f3316cc5682d4d35a93">Read
+                            <a class="text-blue-700 hover:underline" href="{{ route('newsdetails') }}">Read
                                 Details</a>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                         <div class="mt-2">
                             As we like to drink purified water to keep our body healthy,
                             one can keep their machines healthy by .....
-                            <a class="text-blue-700 hover:underline" href="/newsDetails/667a5f2d2fc6c06444a7754a">Read
+                            <a class="text-blue-700 hover:underline" href="{{ route('newsdetails') }}">Read
                                 Details</a>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                         <div class="mt-2">
                             On a scorching summer day, the sun hung in the sky like a
                             blazing orb, casting its relentless heat u.....
-                            <a class="text-blue-700 hover:underline" href="/newsDetails/66f11cc9326bec327ab1b3d9">Read
+                            <a class="text-blue-700 hover:underline" href="{{ route('newsdetails') }}">Read
                                 Details</a>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                         <div class="mt-2">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit.Perferendis, eligendi ipsa. Harum, eos volup.....
-                            <a class="text-blue-700 hover:underline" href="/newsDetails/66641be79dfc4a4492fa2ead">Read
+                            <a class="text-blue-700 hover:underline" href="{{ route('newsdetails') }}">Read
                                 Details</a>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
                         <div class="mt-2">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit.Perferendis, eligendi ipsa. Harum, eos volup.....
-                            <a class="text-blue-700 hover:underline" href="/newsDetails/66641be79dfc4a4492fa2eaa">Read
+                            <a class="text-blue-700 hover:underline" href="{{ route('newsdetails') }}">Read
                                 Details</a>
                         </div>
                     </div>
