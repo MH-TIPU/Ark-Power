@@ -31,35 +31,38 @@
                         </a>
                         <div class="mt-2">
                             {{ \Illuminate\Support\Str::limit($post->content, 100) }}
-                            <a class="text-blue-700 hover:underline" href="{{ route('productdetails', $post->id) }}">Read
+                            <a class="text-blue-700 hover:underline"
+                                href="{{ route('productdetails', $post->id) }}">Read
                                 Details</a>
                         </div>
                     </div>
                 @endforeach
             </div>
             <!-- Custom pagination design -->
-            <div class="flex justify-center items-center space-x-2 mt-6">
-                <!-- Previous Button -->
-                <button class="px-4 py-2 bg-gray-300 rounded" wire:click="previousPage"
-                    @if ($posts->onFirstPage()) disabled @endif>
-                    Previous
-                </button>
-
-                <!-- Page Numbers -->
-                @for ($page = 1; $page <= $posts->lastPage(); $page++)
-                    <button
-                        class="px-4 py-2 rounded {{ $posts->currentPage() === $page ? 'bg-blue-600 text-white' : 'bg-gray-200' }}"
-                        wire:click="gotoPage({{ $page }})">
-                        {{ $page }}
+            @if ($totalPosts > 12)
+                <div class="flex justify-center items-center space-x-2 mt-6">
+                    <!-- Previous Button -->
+                    <button class="px-4 py-2 bg-gray-300 rounded" wire:click="previousPage"
+                        @if ($posts->onFirstPage()) disabled @endif>
+                        Previous
                     </button>
-                @endfor
 
-                <!-- Next Button -->
-                <button class="px-4 py-2 bg-blue-500 text-white rounded" wire:click="nextPage"
-                    @if (!$posts->hasMorePages()) disabled @endif>
-                    Next
-                </button>
-            </div>
+                    <!-- Page Numbers -->
+                    @for ($page = 1; $page <= $posts->lastPage(); $page++)
+                        <button
+                            class="px-4 py-2 rounded {{ $posts->currentPage() === $page ? 'bg-blue-600 text-white' : 'bg-gray-200' }}"
+                            wire:click="gotoPage({{ $page }})">
+                            {{ $page }}
+                        </button>
+                    @endfor
+
+                    <!-- Next Button -->
+                    <button class="px-4 py-2 bg-blue-500 text-white rounded" wire:click="nextPage"
+                        @if (!$posts->hasMorePages()) disabled @endif>
+                        Next
+                    </button>
+                </div>
+            @endif
         </div>
     </div>
 </div>
