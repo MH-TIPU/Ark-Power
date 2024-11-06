@@ -16,7 +16,7 @@
                             <div class="flex justify-between items-center my-2">
                                 <p class="font-bold uppercase">{{ $data->category->name }}</p>
                                 <p>{{ $data->created_at->format('Y-m-d') }}</p>
-                            </div>{{ $data->content }}
+                            </div>{!! $data->content !!}
                         </div>
                     </div>
                 </div>

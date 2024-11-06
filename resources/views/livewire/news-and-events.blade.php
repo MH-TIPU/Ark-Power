@@ -30,7 +30,7 @@
                             {{ $post->title }}
                         </a>
                         <div class="mt-2">
-                            {{ \Illuminate\Support\Str::limit($post->content, 100) }}
+                            {!! \Illuminate\Support\Str::limit($post->content, 100) !!}
                             <a class="text-blue-700 hover:underline"
                                 href="{{ route('newsdetails', $post->id) }}">Read
                                 Details</a>
