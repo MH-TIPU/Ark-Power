@@ -22,7 +22,7 @@
 
     <header>
         <div class="shadow-md w-full fixed top-0 z-50 bg-white left-0 py-2">
-            <div class="flex items-center justify-between container mx-auto p-4">
+            <div class="flex items-center justify-between w-full max-w-screen-xl mx-auto p-5">
 
                 <a href="/" id="logo" class="font-bold text-2xl flex items-center gap-1">
                     <img src="{{ asset('storage/' . $siteData->logo) }}" alt="Logo" class="max-h-6 max-w-48" />
@@ -66,7 +66,8 @@
                             class="text-gray-800 hover:text-blue-500 duration-500">Contact</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('career') }}" class="text-gray-800 hover:text-blue-500 duration-500">Career</a>
+                        <a href="{{ route('career') }}"
+                            class="text-gray-800 hover:text-blue-500 duration-500">Career</a>
                     </li>
                 </ul>
             </div>

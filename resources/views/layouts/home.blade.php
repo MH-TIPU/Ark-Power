@@ -49,7 +49,7 @@
 
     <div class="mx-auto container my-10">
         <div class="relative">
-            <div class="md:grid grid-cols-2 gap-10 mt-10 md:mt-16">
+            <div class="md:grid grid-cols-2 gap-10 mt-10 md:mt-16 w-full max-w-screen-xl mx-auto">
                 <div class="relative w-full h-[330px] md:h-[500px] overflow-hidden rounded-lg shadow-lg">
                     <div class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0">
                         <img src="https://images.unsplash.com/photo-1624395149011-470cf6f6ec02?q=80&amp;w=2851&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -68,7 +68,7 @@
                         <div class="absolute inset-0 bg-black/30"></div>
                     </div>
                 </div>
-                <div class="space-y-5 p-5 md:p-10 bg-white/90 rounded-lg shadow-lg">
+                <div class="space-y-5 p-5 md:p-10 rounded-lg shadow-lg">
                     <h1 class="text-primary hidden md:block text-xl md:text-4xl text-[#19ADEE]">WELCOME TO <br> ARK
                         POWER LIMITED</h1>
                     <h2 class="text-primary ">WE SUPPORT ALL YOUR NEEDS!</h2>
@@ -85,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <div class="min-h-[70vh] bg-slate-50 flex items-center justify-center p-6">
+        <div class="min-h-[70vh] flex items-center justify-center p-6 w-full max-w-screen-xl mx-auto">
             <div>
                 <h1 class="text-primary md:text-4xl text-2xl text-center my-10">Products and Services
                 </h1>
@@ -164,7 +164,7 @@
                 </div>
             </div>
         </div>
-        <div class="min-h-[70vh] bg-slate-50 flex items-center justify-center p-5 mt-10">
+        <div class="min-h-[70vh] flex items-center justify-center p-5 mt-10 w-full max-w-screen-xl mx-auto">
             <div>
                 <div class="grid md:grid-cols-2 gap-20">
                     <div>

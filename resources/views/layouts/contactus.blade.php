@@ -10,7 +10,7 @@
                         Get in Touch with Us</h2>
                 </div>
             </div>
-            <div class="container mx-auto py-16 px-5">
+            <div class="w-full max-w-screen-xl mx-auto py-16 px-5">
                 <div>
                     <h1
                         class="text-5xl uppercase font-extrabold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
@@ -129,10 +129,10 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-100 py-10">
-                <div class="container mx-auto">
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <div class="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+            <div class="py-10">
+                <div class="">
+                    <div class="">
+                        <div class="min-h-screen flex items-center justify-center p-6">
                             <form class="w-full md:max-w-2xl bg-white rounded-3xl shadow-2xl p-10 space-y-6">
                                 <h2 class="text-4xl font-bold text-center text-blue-600 mb-8">Get in Touch
                                 </h2>

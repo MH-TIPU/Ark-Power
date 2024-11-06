@@ -8,7 +8,7 @@
                         Career Opportunities</h2>
                 </div>
             </div>
-            <div class="container mx-auto py-24 px-5">
+            <div class="w-full max-w-screen-xl mx-auto py-24 px-5">
                 <div class="text-center mb-16">
                     <h1 class="text-4xl text-primary font-bold mb-4">Explore Exciting Career Opportunities</h1>
                     <p class="text-lg text-gray-600">We’re always looking for talented people to join our team.

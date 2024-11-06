@@ -1,5 +1,5 @@
 <div class="min-h-[calc(100vh-335px)]">
-    <div class="min-h-screen container mx-auto bg-slate-50 flex items-center justify-center p-6">
+    <div class="min-h-screen w-full max-w-screen-xl mx-auto flex items-center justify-center p-6">
         <div>
             <div class="md:mt-24 mt-14">
                 <h1 class="text-primary text-center md:text-5xl text-3xl uppercase">

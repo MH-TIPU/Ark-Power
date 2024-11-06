@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('main-content')
     <div class="min-h-[calc(100vh-335px)]">
-        <div class="min-h-screen container mx-auto p-5">
+        <div class="min-h-screen w-full max-w-screen-xl mx-auto p-5">
             <div class="md:mt-24 mt-14">
                 <div class="grid md:grid-cols-5 gap-16 ">
                     <div class="md:col-span-2"><img src="{{ asset('storage/' . $data->image) }}" alt="Product Image"
