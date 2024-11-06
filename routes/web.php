@@ -12,7 +12,7 @@ Route::get('/career', [BaseController::class, 'career'])->name('career');
 Route::get('/services', [BaseController::class, 'service'])->name('services');
 Route::get('/contact', [BaseController::class, 'contactUs'])->name('contact');
 Route::get('/products', [BaseController::class, 'products'])->name('products');
-Route::get('/newsdetails', [BaseController::class, 'newsDetails'])->name('newsdetails');
+Route::get('/news/{id}', [BaseController::class, 'newsDetails'])->name('newsdetails');
 Route::get('/products/{id}', [BaseController::class, 'productDetails'])->name('productdetails');
 Route::get('/test', [BaseController::class, 'testModel'])->name('test');
 

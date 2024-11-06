@@ -42,10 +42,25 @@ class BaseController extends Controller
         return view('layouts.news', compact('siteData'));
     }
 
-    public function newsDetails()
+    public function newsDetails(string $id)
     {
         $siteData = SiteData::first();
-        return view('layouts.newsdetails', compact('siteData'));
+        $data = Post::find($id);
+
+        // // Fetch related posts ordered by latest creation date
+        // $relatedNews = Post::where('id', '!=', $id) // Exclude the current news item
+        //     ->orderBy('created_at', 'desc') // Order by latest
+        //     ->take(5) // Limit to 5 related news items
+        //     ->get();
+
+        // Fetch related posts from the same category, excluding the current post, ordered by latest
+        $relatedNews = Post::where('category_id', $data->category_id)
+            ->where('id', '!=', $id)
+            ->orderBy('created_at', 'desc')
+            ->take(5)
+            ->get();
+
+        return view('layouts.newsdetails', compact('siteData', 'data', 'relatedNews'));
     }
 
     public function aboutUs()

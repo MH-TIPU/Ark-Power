@@ -26,13 +26,13 @@
                             <p>{{ $post->created_at->format('Y-m-d') }}</p>
                         </div>
                         <a class="hover:underline text-2xl text-gray-700 font-bold"
-                            href="/newsDetails/{{ $post->id }}">
+                            href="{{ route('newsdetails', $post->id) }}">
                             {{ $post->title }}
                         </a>
                         <div class="mt-2">
                             {{ \Illuminate\Support\Str::limit($post->content, 100) }}
                             <a class="text-blue-700 hover:underline"
-                                href="{{ route('productdetails', $post->id) }}">Read
+                                href="{{ route('newsdetails', $post->id) }}">Read
                                 Details</a>
                         </div>
                     </div>
