@@ -12,8 +12,8 @@ class BaseController extends Controller
     public function home()
     {
         $siteData = SiteData::first();
-        // dd($siteData);
-        return view('layouts.home', compact('siteData'));
+        $latestPosts = Post::orderBy('created_at', 'desc')->take(9)->get();
+        return view('layouts.home', compact('siteData', 'latestPosts'));
     }
 
     public function products()
