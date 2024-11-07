@@ -26,6 +26,11 @@ class SitedataResource extends Resource
 {
     protected static ?string $model = Sitedata::class;
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Site Seetings';
+    }
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form

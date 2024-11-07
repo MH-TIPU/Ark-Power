@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\BlogCategoryResource\Pages;
-use App\Filament\Resources\BlogCategoryResource\RelationManagers;
-use App\Models\BlogCategory;
-use Faker\Provider\ar_EG\Text;
+use App\Filament\Resources\ManagementResource\Pages;
+use App\Filament\Resources\ManagementResource\RelationManagers;
+use App\Models\Management;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,23 +13,20 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 
-use Filament\Forms\Get;
-use Filament\Forms\Set;
-use Illuminate\Support\Str;
-
-class BlogCategoryResource extends Resource
+class ManagementResource extends Resource
 {
-    protected static ?string $model = BlogCategory::class;
+    protected static ?string $model = Management::class;
 
     public static function getNavigationGroup(): ?string
     {
-        return 'News & Events';
+        return 'Site Seetings';
     }
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -39,37 +35,31 @@ class BlogCategoryResource extends Resource
     {
         return $form
             ->schema([
-
                 TextInput::make('name')
-                    ->label('Name')
-                    ->required()
-                    ->live(debounce: 2000)
-                    ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
-                        if (($get('slug') ?? '') !== Str::slug($old)) {
-                            return;
-                        }
+                ->required()
+                ->label('Name'),
+                
+            TextInput::make('designation')
+                ->required()
+                ->label('Designation'),
+                
+            Textarea::make('about')
+                ->label('About'),
 
-                        $set('slug', Str::slug($state));
-                    }),
-
-                TextInput::make('slug')->unique(ignorable: fn($record) => $record)->required(),
-
-                Textarea::make('description')
-                    ->label('Description')
-                    ->nullable(),
-
-
-                FileUpload::make('image')
-                    ->label('Post Category Image')
-                    ->image()
-                    ->nullable()
-                    ->getUploadedFileNameForStorageUsing(function ($file) {
-                        $uniqueId = uniqid('post_category_');
-                        return $uniqueId . '.' . $file->getClientOriginalExtension();
-                    }),
+            FileUpload::make('image')
+                ->label('Femanagement Image')
+                ->image()
+                ->required()
+                ->getUploadedFileNameForStorageUsing(function ($file) {
+                    $uniqueId = uniqid('management_images');
+                    return $uniqueId . '.' . $file->getClientOriginalExtension();
+                }),
 
 
             ]);
+
+
+
     }
 
     public static function table(Table $table): Table
@@ -80,10 +70,14 @@ class BlogCategoryResource extends Resource
                     ->label('Name')
                     ->searchable()
                     ->sortable(),
+            
+                TextColumn::make('designation')
+                    ->label('Designation')
+                    ->searchable()
+                    ->sortable(),
 
                 ImageColumn::make('image')
                     ->label('Image')
-                    ->searchable()
                     ->sortable(),
             ])
             ->filters([
@@ -111,9 +105,9 @@ class BlogCategoryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBlogCategories::route('/'),
-            // 'create' => Pages\CreateBlogCategory::route('/create'),
-            // 'edit' => Pages\EditBlogCategory::route('/{record}/edit'),
+            'index' => Pages\ListManagement::route('/'),
+            // 'create' => Pages\CreateManagement::route('/create'),
+            // 'edit' => Pages\EditManagement::route('/{record}/edit'),
         ];
     }
 }
