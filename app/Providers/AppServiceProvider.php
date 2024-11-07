@@ -15,6 +15,9 @@ use App\Observers\ProductObserver;
 use App\Observers\BlogCategoryObserver;
 use App\Observers\PostObserver;
 
+use App\Models\Management;
+use App\Observers\ManagementObserver;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -35,5 +38,6 @@ class AppServiceProvider extends ServiceProvider
         Product::observe(ProductObserver::class);
         BlogCategory::observe(BlogCategoryObserver::class);
         Post::observe(PostObserver::class);
+        Management::observe(ManagementObserver::class);
     }
 }
