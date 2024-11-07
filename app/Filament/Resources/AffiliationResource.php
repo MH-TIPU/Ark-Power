@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ManagementResource\Pages;
-use App\Filament\Resources\ManagementResource\RelationManagers;
-use App\Models\Management;
+use App\Filament\Resources\AffiliationResource\Pages;
+use App\Filament\Resources\AffiliationResource\RelationManagers;
+use App\Models\Affiliation;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,16 +13,15 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 
-class ManagementResource extends Resource
+class AffiliationResource extends Resource
 {
-    protected static ?string $model = Management::class;
+    protected static ?string $model = Affiliation::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -32,29 +31,26 @@ class ManagementResource extends Resource
             ->schema([
                 TextInput::make('name')
                 ->required()
-                ->label('Name'),
-                
-            TextInput::make('designation')
-                ->required()
-                ->label('Designation'),
-                
-            Textarea::make('about')
-                ->label('About'),
+                ->label('Affiliation Name'),
 
-            FileUpload::make('image')
-                ->label('Femanagement Image')
+            TextInput::make('url')
+                ->url()
+                ->label('URL')
+                ->placeholder('https://example.com'),
+
+            FileUpload::make('logo')
+                ->label('Affiliation logo')
                 ->image()
                 ->required()
                 ->getUploadedFileNameForStorageUsing(function ($file) {
-                    $uniqueId = uniqid('management_images');
+                    $uniqueId = uniqid('affiliation_logos');
                     return $uniqueId . '.' . $file->getClientOriginalExtension();
                 }),
 
 
+
+
             ]);
-
-
-
     }
 
     public static function table(Table $table): Table
@@ -62,18 +58,12 @@ class ManagementResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->label('Name')
                     ->searchable()
-                    ->sortable(),
-            
-                TextColumn::make('designation')
-                    ->label('Designation')
-                    ->searchable()
-                    ->sortable(),
-
-                ImageColumn::make('image')
-                    ->label('Image')
-                    ->sortable(),
+                    ->label('Name'),
+                ImageColumn::make('logo')
+                    ->label('Logo'),
+                TextColumn::make('url')
+                    ->label('URL'),
             ])
             ->filters([
                 //
@@ -100,9 +90,9 @@ class ManagementResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListManagement::route('/'),
-            // 'create' => Pages\CreateManagement::route('/create'),
-            // 'edit' => Pages\EditManagement::route('/{record}/edit'),
+            'index' => Pages\ListAffiliations::route('/'),
+            // 'create' => Pages\CreateAffiliation::route('/create'),
+            // 'edit' => Pages\EditAffiliation::route('/{record}/edit'),
         ];
     }
 }
