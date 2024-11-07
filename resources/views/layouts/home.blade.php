@@ -5,7 +5,7 @@
         <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Black shadow overlay -->
         <div class="container mx-auto h-screen flex items-center relative z-10">
             <div class="text-center md:text-left p-5 md:w-1/2 bg-transparent backdrop-blur-[1px]">
-                <p class="text-xl text-white">Welcome to</p>
+                <p class="text-xl text-white">Welcome to Ark Power</p>
                 <h1 class="my-3 text-[#19ADEE] md:text-5xl text-3xl md:font-bold font-semibold uppercase ">Ark Power Limited</h1>
                 <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium libero fugiat magnam. Natus fugit
                     deserunt dignissimos blanditiis id tempore praesentium veritatis? Ad, rerum. Veniam, iusto illo dolorum
