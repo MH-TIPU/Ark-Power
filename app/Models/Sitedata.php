@@ -18,6 +18,8 @@ class Sitedata extends Model
         'favIcon',
         'address',
         'phoneNumber',
+        'phoneNumber2',
+
         'email',
         'fbUrl',
         'linkdinUrl',
