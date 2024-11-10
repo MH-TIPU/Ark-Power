@@ -9,6 +9,7 @@ Route::get('/', 'App\Http\Controllers\BaseController@home');
 Route::get('/news', [BaseController::class, 'news'])->name('news');
 Route::get('/about', [BaseController::class, 'aboutUs'])->name('about');
 Route::get('/career', [BaseController::class, 'career'])->name('career');
+Route::get('/careers/{id}', [BaseController::class, 'careerDetails'])->name('careerdetails');
 Route::get('/services', [BaseController::class, 'service'])->name('services');
 Route::get('/contact', [BaseController::class, 'contactUs'])->name('contact');
 Route::get('/products', [BaseController::class, 'products'])->name('products');

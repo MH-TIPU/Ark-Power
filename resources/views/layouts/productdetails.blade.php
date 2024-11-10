@@ -10,9 +10,9 @@
                         <h1 class="text-primary mb-5 md:text-5xl text-3xl uppercase">{{ $data->name }}</h1>
                         <p class="text-gray-600">{{ $data->description }}</p>
                         <div class="pt-10">
-                            <h4 class="text-xl font-bold text-gray-700 mb-2">PDF Link</h4><a
-                                class="text-blue-500 hover:underline cursor-pointer" target="_blank"
-                                rel="noopener noreferrer">download PDF</a>
+                            {{-- <h4 class="text-xl font-bold text-gray-700 mb-2">PDF Link</h4> --}}
+                            <a href="{{ $data->source_url }}" class="text-blue-500 hover:underline cursor-pointer"
+                                target="_blank" rel="noopener noreferrer">View Catalog</a>
                         </div>
                     </div>
                 </div>

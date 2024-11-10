@@ -27,10 +27,16 @@
                             </svg>
                             <h1 class="text-2xl font-bold text-gray-700">Job Opportunities</h1>
                         </div>
-                        <div class="py-4 border-b border-gray-200 hover:bg-gray-50 transition duration-300"><a
-                                class="text-lg text-gray-800 hover:text-blue-500 uppercase"
-                                href="/careerDetails/66769fd62eb6600e1317cf9c">1. TITLE OF THE POSITION:
-                                MANAGER, PROJECT FINANCE DEPARTMENT </a></div>
+                        @foreach ($careers as $career)
+                            @if ($career->category->name === 'Job')
+                                <div class="py-4 border-b border-gray-200 hover:bg-gray-50 transition duration-300">
+                                    <a class="text-lg text-gray-800 hover:text-blue-500 uppercase"
+                                        href="{{ route('careerdetails', $career->id) }}">
+                                        {{ $career->title }}
+                                    </a>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
                     <div
                         class="bg-white shadow-lg rounded-xl p-8 border border-gray-100 hover:shadow-2xl transition duration-300">
@@ -43,14 +49,16 @@
                             </svg>
                             <h1 class="text-2xl font-bold text-gray-700">Internship Opportunities</h1>
                         </div>
-                        <div class="py-4 border-b border-gray-200 hover:bg-gray-50 transition duration-300"><a
-                                class="text-lg text-gray-800 hover:text-green-500 uppercase"
-                                href="/careerDetails/667bbd006eb076b52e2ae1c7">1. MANAGER, PROJECT FINANCE
-                                DEPARTMENT (2)</a></div>
-                        <div class="py-4 border-b border-gray-200 hover:bg-gray-50 transition duration-300"><a
-                                class="text-lg text-gray-800 hover:text-green-500 uppercase"
-                                href="/careerDetails/66f2792a938faa58e65a9828">2. An error occurred while
-                                updating the Career</a></div>
+                        @foreach ($careers as $career)
+                            @if ($career->category->name === 'Internship')
+                                <div class="py-4 border-b border-gray-200 hover:bg-gray-50 transition duration-300">
+                                    <a class="text-lg text-gray-800 hover:text-green-500 uppercase"
+                                        href="{{ route('careerdetails', $career->id) }}">
+                                        {{ $career->title }}
+                                    </a>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
             </div>

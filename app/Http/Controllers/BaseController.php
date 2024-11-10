@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Career;
 use App\Models\Post;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -78,7 +79,15 @@ class BaseController extends Controller
     public function career()
     {
         $siteData = SiteData::first();
-        return view('layouts.career', compact('siteData'));
+        $careers = Career::with('category')->get(); // Eager load the category relationship
+        return view('layouts.career', compact('siteData', 'careers'));
+    }
+
+    public function careerDetails(string $id)
+    {
+        $siteData = SiteData::first();
+        $data = Career::find($id);
+        return view('layouts.careerdetails', compact('siteData', 'data'));
     }
 
     public function testModel()
