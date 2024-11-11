@@ -4,7 +4,7 @@
         class="relative min-h-screen overflow-hidden bg-cover bg-center transition-all duration-1000">
         <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Black shadow overlay -->
 
-        <div class="container mx-auto h-screen flex items-center relative z-10">
+        <div class="w-full max-w-screen-xl mx-auto h-screen flex items-center relative z-10">
             <div class="text-center md:text-left p-5 md:w-1/2 bg-transparent backdrop-blur-[1px]">
                 <p class="text-xl text-white">Welcome to</p>
                 <h1 class="my-3 text-[#19ADEE] md:text-5xl text-3xl md:font-bold font-semibold uppercase ">Ark Power Limited
@@ -74,8 +74,8 @@
                     </div>
                 </div>
                 <div class="space-y-5 p-5 md:p-10 rounded-lg shadow-lg">
-                    <h1 class="text-primary hidden md:block text-xl md:text-4xl text-[#19ADEE]">WELCOME TO <br> ARK
-                        POWER LIMITED</h1>
+                    <h1 class="text-primary hidden md:block text-xl md:text-4xl text-[#19ADEE]">WELCOME TO <br> ARK POWER
+                        LIMITED</h1>
                     <h2 class="text-primary ">WE SUPPORT ALL YOUR NEEDS!</h2>
                     <p class="leading-6 text-gray-700 ">Ark Power is a leading integrated Power,
                         Electronic &amp; communication technology company that develops, manufactures,
@@ -90,7 +90,7 @@
                 </div>
             </div>
         </div>
-        <div class="min-h-[70vh] flex items-center justify-center p-6 w-full max-w-screen-xl mx-auto">
+        <div class="min-h-[70vh] flex items-center justify-center p-5 w-full max-w-screen-xl mx-auto">
             <div>
                 <h1 class="text-primary md:text-4xl text-2xl text-center my-10">Products and Services
                 </h1>
@@ -199,5 +199,24 @@
                 </div>
             </div>
         </div>
+
+        {{-- Affileactions --}}
+
+        <div class="p-5 w-full max-w-screen-xl mx-auto">
+            <div class="w-full max-w-screen-xl mx-auto">
+                <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1>
+
+                <swiper-container class="mySwiper" slides-per-view="6"  space-between="10" free-mode="true" loop="true" >
+                    @foreach ($affiliations as $affiliation)
+                        <swiper-slide class="swiper-slide">
+                            <img src="{{ asset('storage/' . $affiliation->logo) }}" alt="Affiliation Logo"
+                                class="w-24 h-24 object-contain">
+                        </swiper-slide>
+                    @endforeach
+                </swiper-container>
+
+            </div>
+        </div>
+        {{-- Affileactions End --}}
     </div>
 @endsection

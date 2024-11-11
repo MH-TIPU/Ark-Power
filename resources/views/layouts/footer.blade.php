@@ -55,9 +55,9 @@
                 <div>
                     <h1 class="text-xl font-bold uppercase opacity-80 pb-3">Address</h1>
                     <ul class="space-y-2">
-                        <li><a class="flex items-center uppercase gap-3" href="#"><svg stroke="currentColor"
+                        <li><a class="flex items-center uppercase gap-4" href="#"><svg stroke="currentColor"
                                     fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="text-3xl"
-                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    height="1.2em" width="1.3em" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
                                     </path>
@@ -74,7 +74,7 @@
                                 <p><span class="font-bold">Hot Line</span> <br>Sales- {{ $siteData->phoneNumber }}<br>
                                     Support- {{ $siteData->phoneNumber2 }}</p>
                             </a></li>
-                        <li><a class="flex items-center gap-3" href="#"><svg stroke="currentColor"
+                        <li><a class="flex items-center gap-4" href="#"><svg stroke="currentColor"
                                     fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="text-xl"
                                     height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -116,6 +116,11 @@
         </div>
     </div>
 </footer>
+
+{{-- Scrips  --}}
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
 </body>
 
 </html>
