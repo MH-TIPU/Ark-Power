@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('main-content')
     <div class="min-h-screen">
-        <div class="w-full max-w-screen-xl mx-auto p-6">
+        <div class="w-full max-w-screen-xl mx-auto p-5">
             <div class="md:mt-24 mt-14">
                 <h1 class="text-primary text-center md:text-5xl text-3xl uppercase">Our Services</h1>
                 <p class="text-primary text-center md:mt-2 text-xl md:uppercase mb-10 font-medium">We genuinely care about

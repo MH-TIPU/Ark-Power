@@ -1,4 +1,7 @@
 @extends('layouts.layout')
+@section('title')
+    Home - {{ config('app.name') }}
+@endsection
 @section('main-content')
     <div id="background-section"
         class="relative min-h-screen overflow-hidden bg-cover bg-center transition-all duration-1000">

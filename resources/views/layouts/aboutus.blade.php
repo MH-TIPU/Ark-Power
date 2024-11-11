@@ -2,15 +2,14 @@
 @section('main-content')
     <div class="min-h-[calc(100vh-335px)]">
         <div>
-            <div class="p-5 gap-12 w-full max-w-screen-xl mx-auto mt-24 mb-10">
+            <div class="p-5 w-full max-w-screen-xl mx-auto md:mt-24 mt-14">
                 <div>
-                    <h1 class="text-4xl uppercase font-bold mb-5 text-primary">
-                        Ark Power Limited
+                    <h1 class="text-primary text-center md:text-5xl text-3xl uppercase  mb-7">
+                        About us
                     </h1>
                     <p>{{ $siteData->about }}</p>
                     <div>
                         <div class="text-primary mt-8">
-                            <p class="text-xl">About us</p>
                             <h1 class="text-3xl uppercase font-bold">
                                 Mission &amp; Vision
                             </h1>
