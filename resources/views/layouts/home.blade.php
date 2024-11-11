@@ -199,5 +199,8 @@
                 </div>
             </div>
         </div>
+        <div class="affiliations">
+
+        </div>
     </div>
 @endsection
