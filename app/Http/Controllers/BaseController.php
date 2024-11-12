@@ -120,4 +120,12 @@ class BaseController extends Controller
         $data = Post::all();
         dd($data);
     }
+
+    public function termCondition()
+    {
+        $siteData = SiteData::first();
+        return view('layouts.termcondition', compact('siteData'));
+    }
+
+
 }

@@ -21,7 +21,7 @@
 <body class="">
 
     <header>
-        <div class="shadow-md w-full fixed top-0 z-50 left-0 py-2 navbar">
+        <div class="shadow-md w-full fixed top-0 z-50 left-0 py-2 navbar transition-colors duration-500 ease-in-out">
             <div class="flex items-center justify-between w-full max-w-screen-xl mx-auto p-5">
 
                 <a href="/" id="logo" class="font-bold text-2xl flex items-center gap-1">
@@ -98,9 +98,9 @@
             const navbar = document.querySelector(".navbar");
             if (window.scrollY > 50) {
                 navbar.classList.add("bg-white", "shadow-md");
-                navbar.classList.remove("bg-transparent", "md:text-white", "backdrop-blur-3xl");
+                navbar.classList.remove("bg-transparent", "md:text-blue-400", "backdrop-blur-sm", "shadow-lg");
             } else {
-                navbar.classList.add("bg-transparent", "md:text-white", "backdrop-blur-3xl");
+                navbar.classList.add("bg-transparent", "md:text-blue-400", "backdrop-blur-sm", "shadow-lg");
                 navbar.classList.remove("bg-white", "shadow-md");
             }
         }

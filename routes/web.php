@@ -16,6 +16,9 @@ Route::get('/products', [BaseController::class, 'products'])->name('products');
 Route::get('/news/{id}', [BaseController::class, 'newsDetails'])->name('newsdetails');
 Route::get('/products/{id}', [BaseController::class, 'productDetails'])->name('productdetails');
 Route::get('/test', [BaseController::class, 'testModel'])->name('test');
+Route::get('/termcondition', [BaseController::class, 'termCondition'])->name('termcondition');
+
+
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

@@ -50,7 +50,7 @@
 
                         <div class="mb-2">
                             <p class="text-xl font-bold">Contact Information:</p>
-                            <p>{!! $data->contact_info !!}</p>
+                            <a href="mailto:{!! $data->contact_info !!}">{!! $data->contact_info !!}</a>
                         </div>
 
                         <div class="mb-2">
