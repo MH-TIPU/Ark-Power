@@ -8,6 +8,7 @@ use App\Models\Post;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\SiteData;
+use Carbon\Carbon;
 
 class BaseController extends Controller
 {
@@ -16,8 +17,6 @@ class BaseController extends Controller
         $siteData = SiteData::first();
         $affiliations = Affiliation::all();
         $latestPosts = Post::orderBy('created_at', 'desc')->take(9)->get();
-
-        
 
         return view('layouts.home', compact('siteData', 'latestPosts', 'affiliations'));
     }
@@ -84,7 +83,10 @@ class BaseController extends Controller
     public function career()
     {
         $siteData = SiteData::first();
-        $careers = Career::with('category')->get(); // Eager load the category relationship
+        $careers = Career::with('category') // Eager load the category relationship
+            ->where('is_active', 1) // Only retrieve active careers
+            ->where('deadline', '>=', Carbon::now()) // Only careers with a valid deadline
+            ->get();
         return view('layouts.career', compact('siteData', 'careers'));
     }
 
@@ -92,7 +94,25 @@ class BaseController extends Controller
     {
         $siteData = SiteData::first();
         $data = Career::find($id);
-        return view('layouts.careerdetails', compact('siteData', 'data'));
+
+        // Fetch 2 latest posts for each career category
+        $careerCategories = Career::with('category')
+            ->select('career_category_id')
+            ->distinct()
+            ->get()
+            ->mapWithKeys(function ($career) use ($id) {
+                $categoryName = $career->category->name;
+                $latestPosts = Career::where('career_category_id', $career->career_category_id)
+                    ->where('id', '!=', $id) // Exclude the current job post
+                    ->where('is_active', 1) // Only retrieve active posts
+                    ->where('deadline', '>=', Carbon::now()) // Only careers with a valid deadline
+                    ->latest()
+                    ->take(2)
+                    ->get();
+                return [$categoryName => $latestPosts];
+            });
+
+        return view('layouts.careerdetails', compact('siteData', 'data', 'careerCategories'));
     }
 
     public function testModel()

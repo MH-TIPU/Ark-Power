@@ -27,17 +27,27 @@
                             </svg>
                             <h1 class="text-2xl font-bold text-gray-700">Job Opportunities</h1>
                         </div>
-                        @foreach ($careers as $career)
-                            @if ($career->category->name === 'Job')
-                                <div class="py-4 border-b border-gray-200 hover:bg-gray-50 transition duration-300">
-                                    <a class="text-lg text-gray-800 hover:text-blue-500 uppercase"
-                                        href="{{ route('careerdetails', $career->id) }}">
-                                        {{ $career->title }}
-                                    </a>
-                                </div>
-                            @endif
-                        @endforeach
+
+                        @php
+                            $jobOpportunities = $careers->filter(fn($career) => $career->category->name === 'Job');
+                        @endphp
+
+                        @if ($jobOpportunities->isNotEmpty())
+                            @foreach ($careers as $career)
+                                @if ($career->category->name === 'Job')
+                                    <div class="py-4 border-b border-gray-200 hover:bg-gray-50 transition duration-300">
+                                        <a class="text-lg text-gray-800 hover:text-blue-500 uppercase"
+                                            href="{{ route('careerdetails', $career->id) }}">
+                                            {{ $career->title }}
+                                        </a>
+                                    </div>
+                                @endif
+                            @endforeach
+                        @else
+                            <p class="text-gray-600">No job opportunities are currently available.</p>
+                        @endif
                     </div>
+
                     <div
                         class="bg-white shadow-lg rounded-xl p-8 border border-gray-100 hover:shadow-2xl transition duration-300">
                         <div class="flex items-center space-x-3 mb-6"><svg stroke="currentColor" fill="currentColor"
@@ -49,16 +59,27 @@
                             </svg>
                             <h1 class="text-2xl font-bold text-gray-700">Internship Opportunities</h1>
                         </div>
-                        @foreach ($careers as $career)
-                            @if ($career->category->name === 'Internship')
-                                <div class="py-4 border-b border-gray-200 hover:bg-gray-50 transition duration-300">
-                                    <a class="text-lg text-gray-800 hover:text-green-500 uppercase"
-                                        href="{{ route('careerdetails', $career->id) }}">
-                                        {{ $career->title }}
-                                    </a>
-                                </div>
-                            @endif
-                        @endforeach
+
+                        @php
+                            $internshipOpportunities = $careers->filter(
+                                fn($career) => $career->category->name === 'Internship',
+                            );
+                        @endphp
+
+                        @if ($internshipOpportunities->isNotEmpty())
+                            @foreach ($careers as $career)
+                                @if ($career->category->name === 'Internship')
+                                    <div class="py-4 border-b border-gray-200 hover:bg-gray-50 transition duration-300">
+                                        <a class="text-lg text-gray-800 hover:text-green-500 uppercase"
+                                            href="{{ route('careerdetails', $career->id) }}">
+                                            {{ $career->title }}
+                                        </a>
+                                    </div>
+                                @endif
+                            @endforeach
+                        @else
+                            <p class="text-gray-600">No internship opportunities are currently available.</p>
+                        @endif
                     </div>
                 </div>
             </div>
