@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Affiliation;
 use App\Models\Career;
 use App\Models\Post;
 use App\Models\Product;
@@ -13,8 +14,12 @@ class BaseController extends Controller
     public function home()
     {
         $siteData = SiteData::first();
+        $affiliations = Affiliation::all();
         $latestPosts = Post::orderBy('created_at', 'desc')->take(9)->get();
-        return view('layouts.home', compact('siteData', 'latestPosts'));
+
+        
+
+        return view('layouts.home', compact('siteData', 'latestPosts', 'affiliations'));
     }
 
     public function products()
