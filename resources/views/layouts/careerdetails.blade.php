@@ -16,7 +16,6 @@
                             <p>{!! $data->responsibilities !!}</p>
                         </div>
 
-
                         <p><strong>Required Skills:</strong></p>
                         <p>{!! $data->required_skills !!}</p>
                         <p><strong>Location: </strong>{{ $data->location }}</p>
