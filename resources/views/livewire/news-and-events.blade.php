@@ -15,7 +15,7 @@
                     class="px-4 py-2 mx-2 {{ $filter === 'events' ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">Events</button>
             </div>
             <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-5 my-10">
-                @foreach ($posts as $post)
+                @forelse ($posts as $post)
                     <div class="border p-2">
                         <div class="relative h-44 overflow-hidden">
                             <img src="{{ asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}"
@@ -31,12 +31,15 @@
                         </a>
                         <div class="mt-2">
                             {!! \Illuminate\Support\Str::limit($post->content, 100) !!}
-                            <a class="text-blue-700 hover:underline"
-                                href="{{ route('newsdetails', $post->id) }}">Read
+                            <a class="text-blue-700 hover:underline" href="{{ route('newsdetails', $post->id) }}">Read
                                 Details</a>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                    <div class="col-span-full text-center text-gray-700 font-semibold">
+                        <p>No news available at the moment.</p>
+                    </div>
+                @endforelse
             </div>
             <!-- Custom pagination design -->
             @if ($totalPosts > 12)

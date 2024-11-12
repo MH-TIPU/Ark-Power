@@ -7,7 +7,11 @@
                     <h1 class="text-primary text-center md:text-5xl text-3xl uppercase  mb-7">
                         About us
                     </h1>
-                    <p>{{ $siteData->about }}</p>
+                    @if ($siteData && $siteData->about)
+                        <p>{{ $siteData->about }}</p>
+                    @else
+                        <p class="text-gray-700 leading-relaxed">Data not available.</p>
+                    @endif
                     <div>
                         <div class="text-primary mt-8">
                             <h1 class="text-3xl uppercase font-bold">
@@ -19,13 +23,21 @@
                                 <h1 class="text-primary font-bold text-2xl border-b border-[#00ADF2] mb-3">
                                     Our Mission
                                 </h1>
-                                <p>{{ $siteData->mission }}</p>
+                                @if ($siteData && $siteData->mission)
+                                    <p>{{ $siteData->mission }}</p>
+                                @else
+                                    <p class="text-gray-700 leading-relaxed">Data not available.</p>
+                                @endif
                             </div>
                             <div>
                                 <h1 class="text-primary font-bold text-2xl border-b border-[#00ADF2] mb-3">
                                     Our Vision
                                 </h1>
-                                <p>{{ $siteData->vision }}</p>
+                                @if ($siteData && $siteData->vision)
+                                    <p>{{ $siteData->vision }}</p>
+                                @else
+                                    <p class="text-gray-700 leading-relaxed">Data not available.</p>
+                                @endif
                             </div>
                         </div>
                     </div>

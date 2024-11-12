@@ -10,7 +10,7 @@
                 <button class="px-4 py-2 mx-2 bg-gray-200">Events</button>
             </div>
             <div class="grid lg:grid-cols-4 md:grid-cols-3 gap-10">
-                @foreach ($products as $product)
+                @forelse ($products as $product)
                     <div
                         class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md overflow-hidden p-1 border hover:shadow-xl">
                         <div
@@ -35,7 +35,11 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                    <div class="col-span-full text-center text-gray-700 font-semibold">
+                        <p>No products available at the moment.</p>
+                    </div>
+                @endforelse
             </div>
             <!-- Pagination links -->
             @if ($products->hasPages())
