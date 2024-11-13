@@ -1,7 +1,4 @@
-@extends('layouts.layout')
-@section('title')
-    Home - {{ config('app.name') }}
-@endsection
+@extends('layouts.layout-home')
 @section('main-content')
     <div id="background-section"
         class="relative min-h-screen overflow-hidden bg-cover bg-center transition-all duration-1000">
@@ -177,39 +174,43 @@
                 <div class="grid md:grid-cols-2 gap-20">
                     <div>
                         <h1 class="text-2xl font-bold uppercase mb-7">News and event</h1>
-                        <div
-                            class="scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-slate-300 scrollbar-w-2 scrollbar-track-transparent overflow-y-auto h-[42vh] border rounded-lg space-y-4 pr-3">
-                            @foreach ($latestPosts as $news)
-                                <a href="{{ route('newsdetails', $news->id) }}">
-                                    <div class="">
-                                        <div
-                                            class="flex items-center justify-between gap-5 border-b hover:text-[#00ADF2] ">
-                                            <h1 class="text-xl font-bold p-3">{{ $news->title }}</h1><svg
-                                                stroke="currentColor" fill="currentColor" stroke-width="0"
-                                                viewBox="0 0 448 512" class="text-2xl" height="1em" width="1em"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
-                                                </path>
-                                            </svg>
+                        @if ($latestPosts->isNotEmpty())
+                            <div
+                                class="scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-slate-300 scrollbar-w-2 scrollbar-track-transparent overflow-y-auto h-[42vh] border rounded-lg space-y-4 pr-3">
+                                @foreach ($latestPosts as $news)
+                                    <a href="{{ route('newsdetails', $news->id) }}">
+                                        <div class="">
+                                            <div
+                                                class="flex items-center justify-between gap-5 border-b hover:text-[#00ADF2] ">
+                                                <h1 class="text-xl font-bold p-3">{{ $news->title }}</h1><svg
+                                                    stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                    viewBox="0 0 448 512" class="text-2xl" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
+                                                    </path>
+                                                </svg>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            @endforeach
-                        </div>
+                                    </a>
+                                @endforeach
+                            </div>
+                        @else
+                            <p class="text-center p-4">No news available at the moment.</p>
+                        @endif
                     </div>
                     @livewire('management-tabs')
                 </div>
             </div>
         </div>
 
-        {{-- Affileactions --}}
+        {{-- Affiliations --}}
 
         <div class="p-5 w-full max-w-screen-xl mx-auto">
             <div class="w-full max-w-screen-xl mx-auto">
                 <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1>
-
-                <swiper-container class="mySwiper" slides-per-view="6"  space-between="10" free-mode="true" loop="true" >
+                <swiper-container class="mySwiper" slides-per-view="6" space-between="10" free-mode="true"
+                    loop="true">
                     @foreach ($affiliations as $affiliation)
                         <swiper-slide class="swiper-slide">
                             <img src="{{ asset('storage/' . $affiliation->logo) }}" alt="Affiliation Logo"
@@ -217,9 +218,47 @@
                         </swiper-slide>
                     @endforeach
                 </swiper-container>
-
             </div>
         </div>
         {{-- Affileactions End --}}
+
+        {{-- Affiliations --}}
+        {{-- <div class="p-5 w-full max-w-screen-xl mx-auto">
+            <div class="w-full max-w-screen-xl mx-auto">
+                <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1>
+
+                <swiper-container class="mySwiper" slides-per-view="6" space-between="10" free-mode="true"
+                    loop="true">
+                    @foreach ($affiliations as $affiliation)
+                        <div class="swiper-slide">
+                            <img src="{{ asset('storage/' . $affiliation->logo) }}" alt="Affiliation Logo"
+                                class="w-24 h-24 object-contain">
+                        </div>
+                    @endforeach
+                </swiper-container>
+            </div>
+        </div> --}}
+        {{-- Affiliations End --}}
+
+        <!-- Initialize Swiper -->
+        {{-- <script>
+            const swiper = new Swiper('.mySwiper', {
+                slidesPerView: 6,
+                spaceBetween: 10,
+                freeMode: true,
+                loop: true,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                    },
+                    1024: {
+                        slidesPerView: 6,
+                    }
+                }
+            });
+        </script> --}}
     </div>
 @endsection

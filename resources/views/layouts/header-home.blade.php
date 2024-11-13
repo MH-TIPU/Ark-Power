@@ -46,12 +46,10 @@
                         <a href="/" class=" hover:text-blue-500 duration-500">Home</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('services') }}"
-                            class="hover:text-blue-500 duration-500">Service</a>
+                        <a href="{{ route('services') }}" class="hover:text-blue-500 duration-500">Service</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('products') }}"
-                            class="hover:text-blue-500 duration-500">Products</a>
+                        <a href="{{ route('products') }}" class="hover:text-blue-500 duration-500">Products</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
                         <a href="{{ route('news') }}" class="hover:text-blue-500 duration-500">News &
@@ -62,12 +60,10 @@
                             Us</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('contact') }}"
-                            class=" hover:text-blue-500 duration-500">Contact</a>
+                        <a href="{{ route('contact') }}" class=" hover:text-blue-500 duration-500">Contact</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('career') }}"
-                            class="hover:text-blue-500 duration-500">Career</a>
+                        <a href="{{ route('career') }}" class="hover:text-blue-500 duration-500">Career</a>
                     </li>
                 </ul>
             </div>
@@ -98,9 +94,9 @@
             const navbar = document.querySelector(".navbar");
             if (window.scrollY > 50) {
                 navbar.classList.add("bg-white", "shadow-md");
-                navbar.classList.remove("bg-transparent", "md:text-black", "backdrop-blur-sm", "shadow-lg");
+                navbar.classList.remove("bg-transparent", "md:text-white", "backdrop-blur-sm", "shadow-lg");
             } else {
-                navbar.classList.add("bg-transparent", "md:text-black", "backdrop-blur-sm", "shadow-lg");
+                navbar.classList.add("bg-transparent", "md:text-white", "backdrop-blur-sm", "shadow-lg");
                 navbar.classList.remove("bg-white", "shadow-md");
             }
         }

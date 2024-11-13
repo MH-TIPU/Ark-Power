@@ -24,8 +24,7 @@ class BaseController extends Controller
     public function products()
     {
         $siteData = SiteData::first();
-        $data = Product::all();
-        return view('layouts.products', compact('siteData', 'data'));
+        return view('layouts.products', compact('siteData'));
     }
 
     public function productDetails(string $id)
@@ -51,12 +50,6 @@ class BaseController extends Controller
     {
         $siteData = SiteData::first();
         $data = Post::find($id);
-
-        // // Fetch related posts ordered by latest creation date
-        // $relatedNews = Post::where('id', '!=', $id) // Exclude the current news item
-        //     ->orderBy('created_at', 'desc') // Order by latest
-        //     ->take(5) // Limit to 5 related news items
-        //     ->get();
 
         // Fetch related posts from the same category, excluding the current post, ordered by latest
         $relatedNews = Post::where('category_id', $data->category_id)
@@ -127,5 +120,10 @@ class BaseController extends Controller
         return view('layouts.termcondition', compact('siteData'));
     }
 
-
+    public function affiliations()
+    {
+        $siteData = SiteData::first();
+        $affiliations = Affiliation::all();
+        return view('layouts.home', compact('siteData', 'affiliations'));
+    }
 }
