@@ -31,7 +31,14 @@ class BaseController extends Controller
     {
         $siteData = SiteData::first();
         $data = Product::find($id);
-        return view('layouts.productdetails', compact('siteData', 'data'));
+
+        $relatedProducts = Product::where('category_id', $data->category_id)
+            ->where('id', '!=', $id)
+            ->orderBy('created_at', 'desc')
+            ->take(3)
+            ->get();
+
+        return view('layouts.productdetails', compact('siteData', 'data', 'relatedProducts'));
     }
 
     public function service()

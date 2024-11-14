@@ -23,10 +23,6 @@ class Products extends Component
 
     public function render()
     {
-        // return view('livewire.products', [
-        //     'products' => Product::paginate(8), // 8 products per page
-        // ]); 
-
         // Fetch all categories
         $categories = Category::all();
 
