@@ -221,44 +221,5 @@
             </div>
         </div>
         {{-- Affileactions End --}}
-
-        {{-- Affiliations --}}
-        {{-- <div class="p-5 w-full max-w-screen-xl mx-auto">
-            <div class="w-full max-w-screen-xl mx-auto">
-                <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1>
-
-                <swiper-container class="mySwiper" slides-per-view="6" space-between="10" free-mode="true"
-                    loop="true">
-                    @foreach ($affiliations as $affiliation)
-                        <div class="swiper-slide">
-                            <img src="{{ asset('storage/' . $affiliation->logo) }}" alt="Affiliation Logo"
-                                class="w-24 h-24 object-contain">
-                        </div>
-                    @endforeach
-                </swiper-container>
-            </div>
-        </div> --}}
-        {{-- Affiliations End --}}
-
-        <!-- Initialize Swiper -->
-        {{-- <script>
-            const swiper = new Swiper('.mySwiper', {
-                slidesPerView: 6,
-                spaceBetween: 10,
-                freeMode: true,
-                loop: true,
-                breakpoints: {
-                    320: {
-                        slidesPerView: 2,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                    },
-                    1024: {
-                        slidesPerView: 6,
-                    }
-                }
-            });
-        </script> --}}
     </div>
 @endsection

@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="icon" href="{{ asset('storage/' . $siteData->favIcon) }}" type="image/x-icon">
+    @if (!empty($siteData->favIcon))
+        <link rel="icon" href="{{ asset('storage/' . $siteData->favIcon) }}" type="image/x-icon">
+    @else
+        <p class="text-red-500 font-semibold">Favicon is not set. Please upload a favicon.</p>
+    @endif
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -25,7 +29,11 @@
             <div class="flex items-center justify-between w-full max-w-screen-xl mx-auto p-5">
 
                 <a href="/" id="logo" class="font-bold text-2xl flex items-center gap-1">
-                    <img src="{{ asset('storage/' . $siteData->logo) }}" alt="Logo" class="max-h-6 max-w-48" />
+                    @if (!empty($siteData->logo))
+                        <img src="{{ asset('storage/' . $siteData->logo) }}" alt="Logo" class="max-h-6 max-w-48" />
+                    @else
+                        <span class="text-red-500 font-semibold">Logo not set</span>
+                    @endif
                 </a>
 
                 <div onclick="toggleMenu()" class="absolute right-8 cursor-pointer lg:hidden w-7 h-7">

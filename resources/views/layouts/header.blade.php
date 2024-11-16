@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="icon" href="{{ asset('storage/' . $siteData->favIcon) }}" type="image/x-icon">
+    @if (!empty($siteData->favIcon))
+        <link rel="icon" href="{{ asset('storage/' . $siteData->favIcon) }}" type="image/x-icon">
+    @else
+        <p class="text-red-500 font-semibold">Favicon is not set. Please upload a favicon.</p>
+    @endif
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -25,7 +29,11 @@
             <div class="flex items-center justify-between w-full max-w-screen-xl mx-auto p-5">
 
                 <a href="/" id="logo" class="font-bold text-2xl flex items-center gap-1">
-                    <img src="{{ asset('storage/' . $siteData->logo) }}" alt="Logo" class="max-h-6 max-w-48" />
+                    @if (!empty($siteData->logo))
+                        <img src="{{ asset('storage/' . $siteData->logo) }}" alt="Logo" class="max-h-6 max-w-48" />
+                    @else
+                        <span class="text-red-500 font-semibold">Logo not set</span>
+                    @endif
                 </a>
 
                 <div onclick="toggleMenu()" class="absolute right-8 cursor-pointer lg:hidden w-7 h-7">
@@ -46,12 +54,10 @@
                         <a href="/" class=" hover:text-blue-500 duration-500">Home</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('services') }}"
-                            class="hover:text-blue-500 duration-500">Service</a>
+                        <a href="{{ route('services') }}" class="hover:text-blue-500 duration-500">Service</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('products') }}"
-                            class="hover:text-blue-500 duration-500">Products</a>
+                        <a href="{{ route('products') }}" class="hover:text-blue-500 duration-500">Products</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
                         <a href="{{ route('news') }}" class="hover:text-blue-500 duration-500">News &
@@ -62,12 +68,10 @@
                             Us</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('contact') }}"
-                            class=" hover:text-blue-500 duration-500">Contact</a>
+                        <a href="{{ route('contact') }}" class=" hover:text-blue-500 duration-500">Contact</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('career') }}"
-                            class="hover:text-blue-500 duration-500">Career</a>
+                        <a href="{{ route('career') }}" class="hover:text-blue-500 duration-500">Career</a>
                     </li>
                 </ul>
             </div>
