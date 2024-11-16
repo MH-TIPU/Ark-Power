@@ -206,20 +206,24 @@
 
         {{-- Affiliations --}}
 
-        <div class="p-5 w-full max-w-screen-xl mx-auto">
-            <div class="w-full max-w-screen-xl mx-auto">
-                <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1>
-                <swiper-container class="mySwiper" slides-per-view="6" space-between="10" free-mode="true"
-                    loop="true">
-                    @foreach ($affiliations as $affiliation)
-                        <swiper-slide class="swiper-slide">
-                            <img src="{{ asset('storage/' . $affiliation->logo) }}" alt="Affiliation Logo"
-                                class="w-24 h-24 object-contain">
-                        </swiper-slide>
-                    @endforeach
-                </swiper-container>
+        @if ($affiliations->isNotEmpty())
+            <div class="p-5 w-full max-w-screen-xl mx-auto">
+                <div class="w-full max-w-screen-xl mx-auto">
+                    <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1>
+                    <swiper-container class="mySwiper" slides-per-view="6" space-between="10" free-mode="true"
+                        loop="true">
+                        @foreach ($affiliations as $affiliation)
+                            <swiper-slide class="swiper-slide">
+                                <img src="{{ asset('storage/' . $affiliation->logo) }}" alt="Affiliation Logo"
+                                    class="w-24 h-24 object-contain">
+                            </swiper-slide>
+                        @endforeach
+                    </swiper-container>
+                </div>
             </div>
-        </div>
+        @else
+            <p class="text-center text-gray-500 font-medium">No affiliations to display at the moment.</p>
+        @endif
         {{-- Affileactions End --}}
     </div>
 @endsection
