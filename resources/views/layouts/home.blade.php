@@ -224,6 +224,6 @@
         @else
             <p class="text-center text-gray-500 font-medium">No affiliations to display at the moment.</p>
         @endif
-        {{-- Affileactions End --}}
+        {{-- Affiliations End --}}
     </div>
 @endsection
