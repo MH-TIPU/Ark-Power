@@ -29,7 +29,8 @@ class Products extends Component
         // Filter products based on selected category
         $products = Product::when($this->selectedCategory, function ($query) {
             $query->where('category_id', $this->selectedCategory);
-        })->paginate(8);
+        })->where('status', 1) // Include only active products
+            ->paginate(8);
 
         return view('livewire.products', [
             'products' => $products,

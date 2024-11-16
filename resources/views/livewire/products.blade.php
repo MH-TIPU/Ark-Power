@@ -52,7 +52,7 @@
 
                 <!-- Pagination links -->
                 @if ($products->hasPages())
-                    <div class="flex justify-center mt-8">
+                    <div class="flex justify-center mt-8 mb-16">
                         {{-- Previous Page Link --}}
                         @if ($products->onFirstPage())
                             <button disabled class="px-4 py-2 mx-1 border rounded bg-gray-300">Previous</button>
@@ -84,8 +84,6 @@
                     <p>No products available at the moment.</p>
                 </div>
             @endif
-
-
         </div>
     </div>
 </div>

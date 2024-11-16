@@ -90,6 +90,7 @@
                 </div>
             </div>
         </div>
+
         <div class="min-h-[70vh] flex items-center justify-center p-5 w-full max-w-screen-xl mx-auto">
             <div>
                 <h1 class="text-primary md:text-4xl text-2xl text-center my-10">Products and Services
@@ -169,6 +170,7 @@
                 </div>
             </div>
         </div>
+
         <div class="min-h-[70vh] flex items-center justify-center p-5 mt-10 w-full max-w-screen-xl mx-auto">
             <div>
                 <div class="grid md:grid-cols-2 gap-20">
@@ -205,11 +207,10 @@
         </div>
 
         {{-- Affiliations --}}
-
-        @if ($affiliations->isNotEmpty())
-            <div class="p-5 w-full max-w-screen-xl mx-auto">
-                <div class="w-full max-w-screen-xl mx-auto">
-                    <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1>
+        <div class="p-5 w-full max-w-screen-xl mx-auto">
+            <div class="w-full max-w-screen-xl mx-auto">
+                <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1>
+                @if ($affiliations->isNotEmpty())
                     <swiper-container class="mySwiper" slides-per-view="6" space-between="10" free-mode="true"
                         loop="true">
                         @foreach ($affiliations as $affiliation)
@@ -219,11 +220,12 @@
                             </swiper-slide>
                         @endforeach
                     </swiper-container>
-                </div>
+                @else
+                    <p class="text-center text-gray-500 font-medium">No affiliations to display at the moment.</p>
+                @endif
             </div>
-        @else
-            <p class="text-center text-gray-500 font-medium">No affiliations to display at the moment.</p>
-        @endif
+        </div>
+
         {{-- Affiliations End --}}
     </div>
 @endsection

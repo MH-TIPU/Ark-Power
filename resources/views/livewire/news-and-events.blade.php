@@ -41,7 +41,7 @@
                 </div>
                 <!-- Custom pagination design -->
                 @if ($totalPosts > 12)
-                    <div class="flex justify-center items-center space-x-2 mt-6">
+                    <div class="flex justify-center items-center space-x-2 mt-6 mb-16">
                         <!-- Previous Button -->
                         <button class="px-4 py-2 bg-gray-300 rounded" wire:click="previousPage"
                             @if ($posts->onFirstPage()) disabled @endif>
