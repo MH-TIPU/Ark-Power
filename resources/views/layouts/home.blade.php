@@ -56,21 +56,9 @@
         <div class="relative ">
             <div class="md:grid grid-cols-2 gap-10 mt-10 md:mt-16 w-full max-w-screen-xl p-5 mx-auto">
                 <div class="relative w-full h-[330px] md:h-[500px] overflow-hidden rounded-lg shadow-lg">
-                    <div class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0">
-                        <img src="https://images.unsplash.com/photo-1624395149011-470cf6f6ec02?q=80&amp;w=2851&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Slide 0" class="w-full h-full object-cover rounded-lg">
-                        <div class="absolute inset-0 bg-black/30"></div>
-                    </div>
-                    <div
-                        class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100">
-                        <img src="https://images.unsplash.com/photo-1427694012323-fb5e8b0c165b?q=80&amp;w=2978&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Slide 1" class="w-full h-full object-cover rounded-lg">
-                        <div class="absolute inset-0 bg-black/30"></div>
-                    </div>
-                    <div class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0">
-                        <img src="https://images.unsplash.com/photo-1624395148974-f929045c9093?q=80&amp;w=2734&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Slide 2" class="w-full h-full object-cover rounded-lg">
-                        <div class="absolute inset-0 bg-black/30"></div>
+                    <div class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out">
+                        <img src="{{ asset('/img/home_photo_1.jpeg') }}" alt="Slide 0"
+                            class="w-full h-full object-cover rounded-lg" />
                     </div>
                 </div>
                 <div class="space-y-5 p-5 md:p-10 rounded-lg shadow-lg">
