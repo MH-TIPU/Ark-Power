@@ -53,8 +53,7 @@
                             <div
                                 class="relative bg-clip-border overflow-hidden bg-transparent text-gray-700 shadow-none m-0 rounded-none">
                                 <div class="relative h-44 rounded-lg overflow-hidden"><img
-                                        src="https://static.vecteezy.com/system/resources/thumbnails/023/033/609/small_2x/wonderful-mushroom-wallpaper-fantasy-wallpaper-4k-mushroom-light-fantasy-mushroom-jungle-generative-ai-photo.jpeg"
-                                        alt="Product name"
+                                        src="{{ asset('/img/service_mushroom.jpeg') }}" alt="Product name"
                                         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
                                 </div>
                             </div>
