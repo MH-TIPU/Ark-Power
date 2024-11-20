@@ -135,7 +135,7 @@ class SitedataResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('siteName')->label('Site Name'),
-                TextColumn::make('tagLine')->label('Tagline'),
+                
                 TextColumn::make('email')->label('Email'),
                 TextColumn::make('phoneNumber')->label('Phone Number'),
             ])
