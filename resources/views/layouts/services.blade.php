@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('main-content')
     <div class="min-h-screen">
-        <div class="w-full max-w-screen-xl mx-auto p-6">
+        <div class="w-full max-w-screen-xl mx-auto p-5">
             <div class="md:mt-24 mt-14">
                 <h1 class="text-primary text-center md:text-5xl text-3xl uppercase">Our Services</h1>
                 <p class="text-primary text-center md:mt-2 text-xl md:uppercase mb-10 font-medium">We genuinely care about
@@ -53,8 +53,7 @@
                             <div
                                 class="relative bg-clip-border overflow-hidden bg-transparent text-gray-700 shadow-none m-0 rounded-none">
                                 <div class="relative h-44 rounded-lg overflow-hidden"><img
-                                        src="https://static.vecteezy.com/system/resources/thumbnails/023/033/609/small_2x/wonderful-mushroom-wallpaper-fantasy-wallpaper-4k-mushroom-light-fantasy-mushroom-jungle-generative-ai-photo.jpeg"
-                                        alt="Product name"
+                                        src="{{ asset('/img/service_mushroom.jpeg') }}" alt="Product name"
                                         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
                                 </div>
                             </div>

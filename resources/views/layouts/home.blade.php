@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout-home')
 @section('main-content')
     <div id="background-section"
         class="relative min-h-screen overflow-hidden bg-cover bg-center transition-all duration-1000">
@@ -56,21 +56,9 @@
         <div class="relative ">
             <div class="md:grid grid-cols-2 gap-10 mt-10 md:mt-16 w-full max-w-screen-xl p-5 mx-auto">
                 <div class="relative w-full h-[330px] md:h-[500px] overflow-hidden rounded-lg shadow-lg">
-                    <div class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0">
-                        <img src="https://images.unsplash.com/photo-1624395149011-470cf6f6ec02?q=80&amp;w=2851&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Slide 0" class="w-full h-full object-cover rounded-lg">
-                        <div class="absolute inset-0 bg-black/30"></div>
-                    </div>
-                    <div
-                        class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100">
-                        <img src="https://images.unsplash.com/photo-1427694012323-fb5e8b0c165b?q=80&amp;w=2978&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Slide 1" class="w-full h-full object-cover rounded-lg">
-                        <div class="absolute inset-0 bg-black/30"></div>
-                    </div>
-                    <div class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0">
-                        <img src="https://images.unsplash.com/photo-1624395148974-f929045c9093?q=80&amp;w=2734&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Slide 2" class="w-full h-full object-cover rounded-lg">
-                        <div class="absolute inset-0 bg-black/30"></div>
+                    <div class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out">
+                        <img src="{{ asset('/img/home_photo_1.jpeg') }}" alt="Slide 0"
+                            class="w-full h-full object-cover rounded-lg" />
                     </div>
                 </div>
                 <div class="space-y-5 p-5 md:p-10 rounded-lg shadow-lg">
@@ -90,6 +78,7 @@
                 </div>
             </div>
         </div>
+
         <div class="min-h-[70vh] flex items-center justify-center p-5 w-full max-w-screen-xl mx-auto">
             <div>
                 <h1 class="text-primary md:text-4xl text-2xl text-center my-10">Products and Services
@@ -169,54 +158,62 @@
                 </div>
             </div>
         </div>
+
         <div class="min-h-[70vh] flex items-center justify-center p-5 mt-10 w-full max-w-screen-xl mx-auto">
             <div>
                 <div class="grid md:grid-cols-2 gap-20">
                     <div>
                         <h1 class="text-2xl font-bold uppercase mb-7">News and event</h1>
-                        <div
-                            class="scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-slate-300 scrollbar-w-2 scrollbar-track-transparent overflow-y-auto h-[42vh] border rounded-lg space-y-4 pr-3">
-                            @foreach ($latestPosts as $news)
-                                <a href="{{ route('newsdetails', $news->id) }}">
-                                    <div class="">
-                                        <div
-                                            class="flex items-center justify-between gap-5 border-b hover:text-[#00ADF2] ">
-                                            <h1 class="text-xl font-bold p-3">{{ $news->title }}</h1><svg
-                                                stroke="currentColor" fill="currentColor" stroke-width="0"
-                                                viewBox="0 0 448 512" class="text-2xl" height="1em" width="1em"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
-                                                </path>
-                                            </svg>
+                        @if ($latestPosts->isNotEmpty())
+                            <div
+                                class="scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-slate-300 scrollbar-w-2 scrollbar-track-transparent overflow-y-auto h-[42vh] border rounded-lg space-y-4 pr-3">
+                                @foreach ($latestPosts as $news)
+                                    <a href="{{ route('newsdetails', $news->id) }}">
+                                        <div class="">
+                                            <div
+                                                class="flex items-center justify-between gap-5 border-b hover:text-[#00ADF2] ">
+                                                <h1 class="text-xl font-bold p-3">{{ $news->title }}</h1><svg
+                                                    stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                    viewBox="0 0 448 512" class="text-2xl" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
+                                                    </path>
+                                                </svg>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            @endforeach
-                        </div>
+                                    </a>
+                                @endforeach
+                            </div>
+                        @else
+                            <p class="text-center p-4">No news available at the moment.</p>
+                        @endif
                     </div>
                     @livewire('management-tabs')
                 </div>
             </div>
         </div>
 
-        {{-- Affileactions --}}
-
+        {{-- Affiliations --}}
         <div class="p-5 w-full max-w-screen-xl mx-auto">
             <div class="w-full max-w-screen-xl mx-auto">
                 <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1>
-
-                <swiper-container class="mySwiper" slides-per-view="6"  space-between="10" free-mode="true" loop="true" >
-                    @foreach ($affiliations as $affiliation)
-                        <swiper-slide class="swiper-slide">
-                            <img src="{{ asset('storage/' . $affiliation->logo) }}" alt="Affiliation Logo"
-                                class="w-24 h-24 object-contain">
-                        </swiper-slide>
-                    @endforeach
-                </swiper-container>
-
+                @if ($affiliations->isNotEmpty())
+                    <swiper-container class="mySwiper" slides-per-view="6" space-between="10" free-mode="true"
+                        loop="true">
+                        @foreach ($affiliations as $affiliation)
+                            <swiper-slide class="swiper-slide">
+                                <img src="{{ asset('storage/' . $affiliation->logo) }}" alt="Affiliation Logo"
+                                    class="w-24 h-24 object-contain">
+                            </swiper-slide>
+                        @endforeach
+                    </swiper-container>
+                @else
+                    <p class="text-center text-gray-500 font-medium">No affiliations to display at the moment.</p>
+                @endif
             </div>
         </div>
-        {{-- Affileactions End --}}
+
+        {{-- Affiliations End --}}
     </div>
 @endsection

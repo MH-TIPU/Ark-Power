@@ -102,9 +102,9 @@
             const navbar = document.querySelector(".navbar");
             if (window.scrollY > 50) {
                 navbar.classList.add("bg-white", "shadow-md");
-                navbar.classList.remove("bg-transparent", "md:text-black", "backdrop-blur-sm", "shadow-lg");
+                navbar.classList.remove("bg-transparent", "md:text-white", "backdrop-blur-sm", "shadow-lg");
             } else {
-                navbar.classList.add("bg-transparent", "md:text-black", "backdrop-blur-sm", "shadow-lg");
+                navbar.classList.add("bg-transparent", "md:text-white", "backdrop-blur-sm", "shadow-lg");
                 navbar.classList.remove("bg-white", "shadow-md");
             }
         }
