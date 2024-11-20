@@ -55,6 +55,16 @@ class SitedataResource extends Resource
                         return $uniqueId . '.' . $file->getClientOriginalExtension();
                     }),
 
+                FileUpload::make('white_logo')
+                    ->label('Footer Logo')
+                    ->image()
+                    ->required()
+                    // ->directory('logos')
+                    ->getUploadedFileNameForStorageUsing(function ($file) {
+                        $uniqueId = uniqid('white_logo_');
+                        return $uniqueId . '.' . $file->getClientOriginalExtension();
+                    }),
+
                 FileUpload::make('favIcon')
                     ->label('Favicon')
                     ->image()
