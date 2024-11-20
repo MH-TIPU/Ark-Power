@@ -8,7 +8,7 @@
     <div class="releted text-white bg-black/50 backdrop-blur-sm">
         <div class="grid md:grid-cols-4 grid-cols-1 py-10 px-5 md:gap-5 w-full max-w-screen-xl p-5 mx-auto">
             <div>
-                @if (!empty($siteData->logo))
+                @if (!empty($siteData->white_logo))
                     <img class="" src="{{ asset('storage/' . $siteData->white_logo) }}" alt="ARK Power Ltd.">
                 @else
                     <span class="text-red-500 font-semibold">Logo not set</span>
