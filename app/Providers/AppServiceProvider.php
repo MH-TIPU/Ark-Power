@@ -9,7 +9,7 @@ use App\Models\BlogCategory;
 use App\Models\Post;
 use Illuminate\Support\ServiceProvider;
 
-use App\Observers\SiteDataObserver;
+use App\Observers\SitedataObserver;
 use App\Observers\CategoryObserver;
 use App\Observers\ProductObserver;
 use App\Observers\BlogCategoryObserver;
