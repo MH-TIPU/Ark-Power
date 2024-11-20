@@ -8,6 +8,7 @@
                             class="object-cover rounded-lg"></div>
                     <div class="md:col-span-3">
                         <h1 class="text-primary mb-5 md:text-5xl text-3xl uppercase">{{ $data->name }}</h1>
+                        <h1 class="text-primary mb-5 text-md md:text-xl">Category: {{ $data->category->name }}</h1>
                         <p class="text-gray-600">{{ $data->description }}</p>
                         <div class="pt-10">
                             {{-- <h4 class="text-xl font-bold text-gray-700 mb-2">PDF Link</h4> --}}

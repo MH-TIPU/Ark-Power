@@ -44,7 +44,8 @@ class BaseController extends Controller
     public function service()
     {
         $siteData = SiteData::first();
-        return view('layouts.services', compact('siteData'));
+        $featuredProduct = Product::where('status', 1)->where('featured', 1)->inRandomOrder()->first();
+        return view('layouts.services', compact('siteData', 'featuredProduct'));
     }
 
     public function news()

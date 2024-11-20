@@ -21,6 +21,7 @@
             </div>
 
             @if ($products->isNotEmpty())
+
                 <div class="grid lg:grid-cols-4 md:grid-cols-3 gap-10">
                     @foreach ($products as $product)
                         <div
