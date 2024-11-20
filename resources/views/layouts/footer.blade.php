@@ -5,7 +5,7 @@
 <footer
     class="relative bg-cover bg-center bg-[url('https://png.pngtree.com/background/20230527/original/pngtree-render-of-a-3d-model-of-a-power-station-picture-image_2761474.jpg')]">
     <div className="absolute bg-black/80"></div>
-    <div class="releted text-white bg-black/50 backdrop-blur-sm">
+    <div class="releted text-white bg-black/50 backdrop-blur-sm text-sm">
         <div class="grid md:grid-cols-4 grid-cols-1 py-10 px-5 md:gap-5 w-full max-w-screen-xl p-5 mx-auto">
             <div>
                 @if (!empty($siteData->logo))
