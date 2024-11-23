@@ -25,7 +25,7 @@
 <body class="">
 
     <header>
-        <div class="shadow-md w-full fixed top-0 z-50 left-0 py-2 navbar transition-colors ease-in-out">
+        <div class="shadow-md w-full fixed top-0 z-50 left-0 py-2 navbar transition-colors  ease-in-out">
             <div class="flex items-center justify-between w-full max-w-screen-xl mx-auto p-5">
 
                 <a href="/" id="logo" class="font-bold text-2xl flex items-center gap-1">
@@ -71,7 +71,7 @@
                         <a href="{{ route('contact') }}" class=" hover:text-blue-500 ">Contact</a>
                     </li>
                     <li class="lg:ml-8 my-2 lg:my-0">
-                        <a href="{{ route('career') }}" class="hover:text-blue-500">Career</a>
+                        <a href="{{ route('career') }}" class="hover:text-blue-500 ">Career</a>
                     </li>
                 </ul>
             </div>
@@ -102,9 +102,9 @@
             const navbar = document.querySelector(".navbar");
             if (window.scrollY > 50) {
                 navbar.classList.add("bg-white", "shadow-md");
-                navbar.classList.remove("bg-transparent", "md:text-black", "backdrop-blur-sm", "shadow-lg");
+                navbar.classList.remove("bg-transparent", "md:text-white", "backdrop-blur-sm", "shadow-lg");
             } else {
-                navbar.classList.add("bg-transparent", "md:text-black", "backdrop-blur-sm", "shadow-lg");
+                navbar.classList.add("bg-transparent", "md:text-white", "backdrop-blur-sm", "shadow-lg");
                 navbar.classList.remove("bg-white", "shadow-md");
             }
         }
