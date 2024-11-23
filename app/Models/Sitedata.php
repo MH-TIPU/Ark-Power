@@ -19,7 +19,6 @@ class Sitedata extends Model
         'address',
         'phoneNumber',
         'phoneNumber2',
-
         'email',
         'fbUrl',
         'linkdinUrl',

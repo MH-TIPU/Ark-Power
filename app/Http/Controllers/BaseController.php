@@ -6,46 +6,46 @@ use App\Models\Career;
 use App\Models\Post;
 use App\Models\Product;
 use Illuminate\Http\Request;
-use App\Models\SiteData;
+use App\Models\Sitedata;
 
 class BaseController extends Controller
 {
     public function home()
     {
-        $siteData = SiteData::first();
+        $siteData = Sitedata::first();
         $latestPosts = Post::orderBy('created_at', 'desc')->take(9)->get();
         return view('layouts.home', compact('siteData', 'latestPosts'));
     }
 
     public function products()
     {
-        $siteData = SiteData::first();
+        $siteData = Sitedata::first();
         $data = Product::all();
         return view('layouts.products', compact('siteData', 'data'));
     }
 
     public function productDetails(string $id)
     {
-        $siteData = SiteData::first();
+        $siteData = Sitedata::first();
         $data = Product::find($id);
         return view('layouts.productdetails', compact('siteData', 'data'));
     }
 
     public function service()
     {
-        $siteData = SiteData::first();
+        $siteData = Sitedata::first();
         return view('layouts.services', compact('siteData'));
     }
 
     public function news()
     {
-        $siteData = SiteData::first();
+        $siteData = Sitedata::first();
         return view('layouts.news', compact('siteData'));
     }
 
     public function newsDetails(string $id)
     {
-        $siteData = SiteData::first();
+        $siteData = Sitedata::first();
         $data = Post::find($id);
 
         // // Fetch related posts ordered by latest creation date
@@ -66,26 +66,26 @@ class BaseController extends Controller
 
     public function aboutUs()
     {
-        $siteData = SiteData::first();
+        $siteData = Sitedata::first();
         return view('layouts.aboutus', compact('siteData'));
     }
 
     public function contactUs()
     {
-        $siteData = SiteData::first();
+        $siteData = Sitedata::first();
         return view('layouts.contactus', compact('siteData'));
     }
 
     public function career()
     {
-        $siteData = SiteData::first();
+        $siteData = Sitedata::first();
         $careers = Career::with('category')->get(); // Eager load the category relationship
         return view('layouts.career', compact('siteData', 'careers'));
     }
 
     public function careerDetails(string $id)
     {
-        $siteData = SiteData::first();
+        $siteData = Sitedata::first();
         $data = Career::find($id);
         return view('layouts.careerdetails', compact('siteData', 'data'));
     }
