@@ -15,6 +15,8 @@ use App\Observers\ProductObserver;
 use App\Observers\BlogCategoryObserver;
 use App\Observers\PostObserver;
 
+use Illuminate\Support\Facades\URL;
+
 use App\Models\Management;
 use App\Observers\ManagementObserver;
 
@@ -39,5 +41,9 @@ class AppServiceProvider extends ServiceProvider
         BlogCategory::observe(BlogCategoryObserver::class);
         Post::observe(PostObserver::class);
         Management::observe(ManagementObserver::class);
+
+        if (env('APP_ENV') === 'production') {
+            URL::forceScheme('https');
+        }
     }
 }
