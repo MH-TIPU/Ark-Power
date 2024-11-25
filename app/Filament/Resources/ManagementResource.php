@@ -49,7 +49,6 @@ class ManagementResource extends Resource
                 FileUpload::make('image')
                     ->label('Femanagement Image')
                     ->image()
-                    ->minSize(24)
                     ->maxSize(6000)
                     ->required()
                     ->getUploadedFileNameForStorageUsing(function ($file) {

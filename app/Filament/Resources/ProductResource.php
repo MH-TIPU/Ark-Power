@@ -64,7 +64,6 @@ class ProductResource extends Resource
                     ->label('Product Image')
                     ->image()
                     ->nullable()
-                    ->minSize(24)
                     ->maxSize(6000)
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('product_');

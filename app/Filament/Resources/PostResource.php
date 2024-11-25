@@ -74,7 +74,6 @@ class PostResource extends Resource
                     ->label('Featured Image')
                     ->image()
                     ->required()
-                    ->minSize(24)
                     ->maxSize(6000)
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('post_featured');

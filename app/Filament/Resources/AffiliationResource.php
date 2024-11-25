@@ -53,10 +53,6 @@ class AffiliationResource extends Resource
                         $uniqueId = uniqid('affiliation_logos');
                         return $uniqueId . '.' . $file->getClientOriginalExtension();
                     }),
-
-
-
-
             ]);
     }
 
