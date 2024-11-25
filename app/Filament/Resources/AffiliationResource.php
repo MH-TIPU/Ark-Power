@@ -36,26 +36,23 @@ class AffiliationResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')
-                ->required()
-                ->label('Affiliation Name'),
+                    ->required()
+                    ->label('Affiliation Name'),
 
-            TextInput::make('url')
-                ->url()
-                ->label('URL')
-                ->placeholder('https://example.com'),
+                TextInput::make('url')
+                    ->url()
+                    ->label('URL')
+                    ->placeholder('https://example.com'),
 
-            FileUpload::make('logo')
-                ->label('Affiliation logo')
-                ->image()
-                ->required()
-                ->getUploadedFileNameForStorageUsing(function ($file) {
-                    $uniqueId = uniqid('affiliation_logos');
-                    return $uniqueId . '.' . $file->getClientOriginalExtension();
-                }),
-
-
-
-
+                FileUpload::make('logo')
+                    ->label('Affiliation logo')
+                    ->image()
+                    ->required()
+                    ->maxSize(6000)
+                    ->getUploadedFileNameForStorageUsing(function ($file) {
+                        $uniqueId = uniqid('affiliation_logos');
+                        return $uniqueId . '.' . $file->getClientOriginalExtension();
+                    }),
             ]);
     }
 

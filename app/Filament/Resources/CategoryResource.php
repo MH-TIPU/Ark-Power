@@ -66,7 +66,7 @@ class CategoryResource extends Resource
                 ->label('Product Category Image')
                     ->image()
                     ->nullable()
-                    // ->directory('favIcons')
+                    ->maxSize(6000)
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('product_category_');
                         return $uniqueId . '.' . $file->getClientOriginalExtension();

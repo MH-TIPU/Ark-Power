@@ -50,26 +50,26 @@ class ProductResource extends Resource
                         if (($get('slug') ?? '') !== Str::slug($old)) {
                             return;
                         }
-    
+
                         $set('slug', Str::slug($state));
                     }),
-                
-                TextInput::make('slug')->unique(ignorable: fn ($record) => $record)->required(),
-                
+
+                TextInput::make('slug')->unique(ignorable: fn($record) => $record)->required(),
+
                 Textarea::make('description')
                     ->label('Description')
                     ->nullable(),
-                
+
                 FileUpload::make('image')
                     ->label('Product Image')
-                        ->image()
-                        ->nullable()
-                        // ->directory('favIcons')
-                        ->getUploadedFileNameForStorageUsing(function ($file) {
-                            $uniqueId = uniqid('product_');
-                            return $uniqueId . '.' . $file->getClientOriginalExtension();
-                        }), 
-                
+                    ->image()
+                    ->nullable()
+                    ->maxSize(6000)
+                    ->getUploadedFileNameForStorageUsing(function ($file) {
+                        $uniqueId = uniqid('product_');
+                        return $uniqueId . '.' . $file->getClientOriginalExtension();
+                    }),
+
                 Select::make('category_id')
                     ->label('Category')
                     ->options(
@@ -90,16 +90,16 @@ class ProductResource extends Resource
                     ->offColor('danger')
                     ->default(false)
                     ->inline(false),
-                
-                TextInput::make('source_name')
-                ->label('Source Name'),
-                
-                TextInput::make('source_url')
-                ->url()
-                ->required(),
 
-                
-                
+                TextInput::make('source_name')
+                    ->label('Source Name'),
+
+                TextInput::make('source_url')
+                    ->url()
+                    ->required(),
+
+
+
 
             ]);
     }
