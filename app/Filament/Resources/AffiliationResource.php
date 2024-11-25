@@ -26,7 +26,7 @@ class AffiliationResource extends Resource
 
     public static function getNavigationGroup(): ?string
     {
-        return 'Site Seetings';
+        return 'Site Settings';
     }
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
