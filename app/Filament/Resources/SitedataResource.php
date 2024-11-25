@@ -49,6 +49,8 @@ class SitedataResource extends Resource
                     ->label('Logo')
                     ->image()
                     ->required()
+                    ->minSize(24)
+                    ->maxSize(6000)
                     // ->directory('logos')
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('logo_');
@@ -58,6 +60,8 @@ class SitedataResource extends Resource
                 FileUpload::make('white_logo')
                     ->label('Footer Logo')
                     ->image()
+                    ->minSize(24)
+                    ->maxSize(6000)
                     ->required()
                     // ->directory('logos')
                     ->getUploadedFileNameForStorageUsing(function ($file) {
@@ -68,6 +72,8 @@ class SitedataResource extends Resource
                 FileUpload::make('favIcon')
                     ->label('Favicon')
                     ->image()
+                    ->minSize(24)
+                    ->maxSize(6000)
                     ->nullable()
                     // ->directory('favIcons')
                     ->getUploadedFileNameForStorageUsing(function ($file) {

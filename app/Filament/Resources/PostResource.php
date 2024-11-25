@@ -61,15 +61,20 @@ class PostResource extends Resource
 
 
                 Select::make('category_id')
-                    ->label('Category')
-                    ->options(fn() => BlogCategory::pluck('name', 'id'))
-                    ->required(),
+                ->label('Category')
+                ->relationship('category', 'name')
+                ->searchable()
+                ->required(),
+
+
+
 
                 FileUpload::make('featured_image')
                     ->label('Featured Image')
                     ->image()
                     ->required()
-                    // ->directory('favIcons')
+                    ->minSize(24)
+                    ->maxSize(6000)
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('post_featured');
                         return $uniqueId . '.' . $file->getClientOriginalExtension();
@@ -109,7 +114,7 @@ class PostResource extends Resource
                     ->label('Featured image')
                     ->searchable()
                     ->sortable(),
-                
+
                 TextColumn::make('category.name')
                     ->label('Category')
                     ->searchable()

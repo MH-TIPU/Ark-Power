@@ -62,6 +62,8 @@ class BlogCategoryResource extends Resource
                 FileUpload::make('image')
                     ->label('Post Category Image')
                     ->image()
+                    ->minSize(24)
+                    ->maxSize(6000)
                     ->nullable()
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('post_category_');

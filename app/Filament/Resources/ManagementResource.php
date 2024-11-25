@@ -36,30 +36,29 @@ class ManagementResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')
-                ->required()
-                ->label('Name'),
-                
-            TextInput::make('designation')
-                ->required()
-                ->label('Designation'),
-                
-            Textarea::make('about')
-                ->label('About'),
+                    ->required()
+                    ->label('Name'),
 
-            FileUpload::make('image')
-                ->label('Femanagement Image')
-                ->image()
-                ->required()
-                ->getUploadedFileNameForStorageUsing(function ($file) {
-                    $uniqueId = uniqid('management_images');
-                    return $uniqueId . '.' . $file->getClientOriginalExtension();
-                }),
+                TextInput::make('designation')
+                    ->required()
+                    ->label('Designation'),
+
+                Textarea::make('about')
+                    ->label('About'),
+
+                FileUpload::make('image')
+                    ->label('Femanagement Image')
+                    ->image()
+                    ->minSize(24)
+                    ->maxSize(6000)
+                    ->required()
+                    ->getUploadedFileNameForStorageUsing(function ($file) {
+                        $uniqueId = uniqid('management_images');
+                        return $uniqueId . '.' . $file->getClientOriginalExtension();
+                    }),
 
 
             ]);
-
-
-
     }
 
     public static function table(Table $table): Table
@@ -70,7 +69,7 @@ class ManagementResource extends Resource
                     ->label('Name')
                     ->searchable()
                     ->sortable(),
-            
+
                 TextColumn::make('designation')
                     ->label('Designation')
                     ->searchable()
