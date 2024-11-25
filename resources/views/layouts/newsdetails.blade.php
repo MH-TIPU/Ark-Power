@@ -20,13 +20,8 @@
                             </div>
                             
                             <h1 class="text-2xl md:text-5xl  font-semibold mb-8">{{ $data->title }}</h1>
-
                             <p>{!! $data->content !!} </p>
-
-                        </div>
-
-                        
-
+                        </div>    
                     </div>
                 </div>
                 <div class="md:col-span-1 bg-blue-gray-50 p-5">
