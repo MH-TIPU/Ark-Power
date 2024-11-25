@@ -8,20 +8,20 @@
             <div class="grid md:grid-cols-4 gap-14">
                 <div class="md:col-span-3">
                     <div class="">
-                        
+
                         <div>
                             <div class="relative overflow-hidden"><img src="{{ asset('storage/' . $data->featured_image) }}"
                                     alt="blog image" class="w-full h-auto object-cover">
                             </div>
                             <div class="flex justify-between items-center my-6">
                                 <p class="font-bold uppercase">{{ $data->category->name }}</p>
-                                <p>{{ $data->created_at->format('Y-m-d') }}</p>
-                                
+                                <p>{{ $data->published_at }}</p>
+
                             </div>
-                            
+
                             <h1 class="text-2xl md:text-5xl  font-semibold mb-8">{{ $data->title }}</h1>
                             <p>{!! $data->content !!} </p>
-                        </div>    
+                        </div>
                     </div>
                 </div>
                 <div class="md:col-span-1 bg-blue-gray-50 p-5">

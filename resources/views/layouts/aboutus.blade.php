@@ -161,7 +161,7 @@
                             policy we will:
                         </p>
                         <ul class="leading-6 list-disc ms-4">
-                            <li>PProducts warranty support.</li>
+                            <li>Products warranty support.</li>
                             <li>Products contactual support</li>
                             <li>Care about the customer happiness.</li>
                         </ul>
