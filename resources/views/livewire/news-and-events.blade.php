@@ -6,13 +6,21 @@
                     News &amp; Events
                 </h1>
             </div>
+
             <div class="flex justify-center my-5">
+                <!-- 'All' Button -->
                 <button wire:click="setFilter('all')"
-                    class="px-4 py-2 mx-2 {{ $filter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">All</button>
-                <button wire:click="setFilter('news')"
-                    class="px-4 py-2 mx-2 {{ $filter === 'news' ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">News</button>
-                <button wire:click="setFilter('events')"
-                    class="px-4 py-2 mx-2 {{ $filter === 'events' ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">Events</button>
+                    class="px-4 py-2 mx-2 {{ $filter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">
+                    All
+                </button>
+
+                <!-- Dynamically Generated Category Buttons -->
+                @foreach ($categories as $category)
+                    <button wire:click="setFilter('{{ $category->slug }}')"
+                        class="px-4 py-2 mx-2 {{ $filter === $category->slug ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">
+                        {{ $category->name }}
+                    </button>
+                @endforeach
             </div>
 
             @if ($posts->isNotEmpty())
