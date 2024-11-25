@@ -60,12 +60,13 @@ class PostResource extends Resource
                 TextInput::make('slug')->unique(ignorable: fn($record) => $record)->required(),
 
 
-                Select::make('category_id')
-                ->label('Category')
-                ->relationship('name', 'id')
-                ->searchable()
-                ->required(),
 
+                Select::make('category_id')
+                    ->label('Category')
+                    ->options(
+                        BlogCategory::all()->pluck('name', 'id')
+                    )
+                    ->required(),
 
 
 
