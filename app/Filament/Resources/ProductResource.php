@@ -45,7 +45,7 @@ class ProductResource extends Resource
                 TextInput::make('name')
                     ->label('Name')
                     ->required()
-                    ->live(debounce: 2000)
+                    ->live(debounce: 1000)
                     ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
                         if (($get('slug') ?? '') !== Str::slug($old)) {
                             return;
