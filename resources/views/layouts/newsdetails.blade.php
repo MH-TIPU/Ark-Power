@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('main-content')
-    <div class="min-h-screen">
+    <div class="min-h-screen mb-10">
         <div class="md:mt-24 mt-14 w-full max-w-screen-xl mx-auto p-5">
             <div class="mb-10">
                 <h1 class="text-primary text-center font-semibold md:text-5xl text-3xl uppercase">News</h1>
