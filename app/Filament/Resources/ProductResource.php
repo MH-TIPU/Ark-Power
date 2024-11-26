@@ -58,6 +58,7 @@ class ProductResource extends Resource
 
                 Textarea::make('description')
                     ->label('Description')
+                    ->required()
                     ->nullable(),
 
                 FileUpload::make('image')
@@ -68,7 +69,8 @@ class ProductResource extends Resource
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('product_');
                         return $uniqueId . '.' . $file->getClientOriginalExtension();
-                    }),
+                    })
+                    ->required(),
 
                 Select::make('category_id')
                     ->label('Category')
@@ -78,7 +80,7 @@ class ProductResource extends Resource
                     ->required(),
 
                 Toggle::make('status')
-                    ->label('Status')
+                    ->label('Publish')
                     ->onColor('success')
                     ->offColor('danger')
                     ->default(false)
@@ -95,8 +97,7 @@ class ProductResource extends Resource
                     ->label('Source Name'),
 
                 TextInput::make('source_url')
-                    ->url()
-                    ->required(),
+                    ->url(),
 
 
 
