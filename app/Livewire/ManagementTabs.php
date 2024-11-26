@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class ManagementTabs extends Component
 {
-    public $activeTab = 'md'; // default tab is Managing Director
+    public $activeTab = 'first'; // default tab is firstd tab
     public $managementData;
     public $currentData;
 
@@ -16,7 +16,7 @@ class ManagementTabs extends Component
         // $this->loadManagementData();
 
         $this->managementData = Management::take(2)->get(); // Fetch only the first two records
-        $this->setTab('md'); // Set the default tab
+        $this->setTab('first'); // Set the default tab
     }
 
     public function setTab($tab)
@@ -25,19 +25,14 @@ class ManagementTabs extends Component
         // $this->loadManagementData();
 
         // Set the current data based on the active tab
-        if ($tab === 'md') {
-            $this->currentData = $this->managementData->first(); // First record for Managing Director
-        } elseif ($tab === 'ceo' && $this->managementData->count() > 1) {
-            $this->currentData = $this->managementData->get(1); // Second record for CEO
+        if ($tab === 'first') {
+            $this->currentData = $this->managementData->first(); // First record for first data
+        } elseif ($tab === 'second' && $this->managementData->count() > 1) {
+            $this->currentData = $this->managementData->get(1); // Second record for second data
         } else {
             $this->currentData = null; // Handle cases where data is not available
         }
     }
-
-    // public function loadManagementData()
-    // {
-    //     $this->managementData = Management::where('designation', $this->activeTab === 'md' ? 'Managing Director' : 'Chief Executive Officer')->first();
-    // }
 
     public function render()
     {

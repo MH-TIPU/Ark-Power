@@ -5,24 +5,17 @@
             <nav>
                 <ul role="tablist" class="flex relative bg-blue-gray-50 bg-opacity-60 rounded-lg p-1 flex-row">
 
-                    <!-- Managing Director Tab -->
-                    <li class="flex items-center justify-center text-center w-full h-full relative bg-transparent py-1 px-2 text-blue-gray-900 antialiased font-sans text-base font-normal leading-relaxed select-none cursor-pointer {{ $activeTab === 'md' ? 'bg-white shadow rounded-md' : '' }}"
-                        wire:click="setTab('md')" role="tab" data-value="md">
+                    <!-- First Tab -->
+                    <li class="flex items-center justify-center text-center w-full h-full relative bg-transparent py-1 px-2 text-blue-gray-900 antialiased font-sans text-base font-normal leading-relaxed select-none cursor-pointer {{ $activeTab === 'first' ? 'bg-white shadow rounded-md' : '' }}"
+                        wire:click="setTab('first')" role="tab" data-value="first">
                         <div class="z-20 text-inherit">
                             {{ $managementData->first()?->designation ?? 'Managing Director (MD)' }}</div>
                     </li>
 
-                    <!-- Chief Executive Officer Tab -->
-                    {{-- <li class="flex items-center justify-center text-center w-full h-full relative bg-transparent py-1 px-2 text-blue-gray-900 antialiased font-sans text-base font-normal leading-relaxed select-none cursor-pointer {{ $activeTab === 'ceo' ? 'bg-white shadow rounded-md' : '' }}"
-                        wire:click="setTab('ceo')" role="tab" data-value="ceo">
-                        <div class="z-20 text-inherit">
-                            {{ $managementData->get(1)?->designation ?? 'Chief Executive Officer (CEO)' }}</div>
-                    </li> --}}
-
-                    <!-- Chief Executive Officer Tab (Hidden Designation if Only One Record) -->
-                    <li class="flex items-center justify-center text-center w-full h-full relative bg-transparent py-1 px-2 text-blue-gray-400 antialiased font-sans text-base font-normal leading-relaxed select-none {{ $managementData->count() > 1 ? 'cursor-pointer text-blue-gray-900' : 'opacity-50 cursor-not-allowed' }} {{ $activeTab === 'ceo' && $managementData->count() > 1 ? 'bg-white shadow rounded-md' : '' }}"
-                        @if ($managementData->count() > 1) wire:click="setTab('ceo')" @endif role="tab"
-                        data-value="ceo">
+                    <!-- Second Tab (Hidden Designation if Only One Record) -->
+                    <li class="flex items-center justify-center text-center w-full h-full relative bg-transparent py-1 px-2 text-blue-gray-400 antialiased font-sans text-base font-normal leading-relaxed select-none {{ $managementData->count() > 1 ? 'cursor-pointer text-blue-gray-900' : 'opacity-50 cursor-not-allowed' }} {{ $activeTab === 'second' && $managementData->count() > 1 ? 'bg-white shadow rounded-md' : '' }}"
+                        @if ($managementData->count() > 1) wire:click="setTab('second')" @endif role="tab"
+                        data-value="second">
                         <div class="z-20 text-inherit">
                             @if ($managementData->count() > 1)
                                 {{ $managementData->get(1)?->designation }}
