@@ -7,17 +7,17 @@
                 </h1>
             </div>
 
-            <div class="flex justify-center my-5">
+            <div class="flex flex-wrap justify-center my-5 gap-2">
                 <!-- 'All' Button -->
                 <button wire:click="setFilter('all')"
-                    class="px-4 py-2 mx-2 {{ $filter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">
+                    class="px-4 py-2 mx-2 my-1 {{ $filter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">
                     All
                 </button>
 
                 <!-- Dynamically Generated Category Buttons -->
                 @foreach ($categories as $category)
                     <button wire:click="setFilter('{{ $category->slug }}')"
-                        class="px-4 py-2 mx-2 {{ $filter === $category->slug ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">
+                        class="px-4 py-2 mx-2 my-1 {{ $filter === $category->slug ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">
                         {{ $category->name }}
                     </button>
                 @endforeach
