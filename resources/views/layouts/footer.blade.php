@@ -71,7 +71,6 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="{{ route('about') }}">About us</a></li>
                         <li><a href="{{ route('products') }}">Our Products</a></li>
-                        <li><a href="#">Our Clients</a></li>
                         <li><a href="{{ route('contact') }}">Contact Us</a></li>
                         <li><a href="{{ route('termcondition') }}">Terms & Conditions</a></li>
                     </ul>
