@@ -65,7 +65,6 @@ class CategoryResource extends Resource
                 FileUpload::make('image')
                 ->label('Product Category Image')
                     ->image()
-                    ->nullable()
                     ->maxSize(6000)
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('product_category_');

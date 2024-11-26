@@ -58,13 +58,11 @@ class ProductResource extends Resource
 
                 Textarea::make('description')
                     ->label('Description')
-                    ->required()
-                    ->nullable(),
+                    ->required(),
 
                 FileUpload::make('image')
                     ->label('Product Image')
                     ->image()
-                    ->nullable()
                     ->maxSize(6000)
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('product_');
