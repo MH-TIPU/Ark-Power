@@ -29,7 +29,7 @@
                     @if ($relatedNews->isNotEmpty())
                         @foreach ($relatedNews as $news)
                             <div class="border bg-white p-2 mb-3">
-                                <div class="relative h-44 overflow-hidden">
+                                <div class="relative h-28 overflow-hidden">
                                     <img src="{{ asset('storage/' . $news->featured_image) }}" alt="{{ $news->title }}"
                                         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
                                 </div>
