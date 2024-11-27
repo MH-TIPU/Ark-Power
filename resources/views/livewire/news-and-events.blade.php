@@ -33,7 +33,7 @@
                             </div>
                             <div class="flex justify-between items-center my-2">
                                 <p class="font-bold uppercase">{{ $post->category->name }}</p>
-                                <p>{{ $post->created_at->format('Y-m-d') }}</p>
+                                <p>{{ $post->published_at->format('Y-m-d') }}</p>
                             </div>
                             <a class="hover:underline text-2xl text-gray-700 font-bold"
                                 href="{{ route('newsdetails', $post->id) }}">
