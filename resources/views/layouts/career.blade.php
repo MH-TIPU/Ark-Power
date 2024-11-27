@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('main-content')
-    <div class="min-h-screen mt-10">
+    <div class="min-h-screen pt-10">
         <div>
             {{-- <div class="bg-[url('https://neevfund.com/wp-content/uploads/2023/03/career-banner.jpg')] bg-cover bg-center">
                 <div class="p-5 pt-32 bg-gradient-to-r from-black/60 to-black/30 text-white">
