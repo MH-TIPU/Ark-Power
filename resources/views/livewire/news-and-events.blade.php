@@ -7,17 +7,17 @@
                 </h1>
             </div>
 
-            <div class="flex justify-center my-5">
+            <div class="flex flex-wrap justify-center my-5 gap-2">
                 <!-- 'All' Button -->
                 <button wire:click="setFilter('all')"
-                    class="px-4 py-2 mx-2 {{ $filter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">
+                    class="px-4 py-2 mx-2 my-1 {{ $filter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">
                     All
                 </button>
 
                 <!-- Dynamically Generated Category Buttons -->
                 @foreach ($categories as $category)
                     <button wire:click="setFilter('{{ $category->slug }}')"
-                        class="px-4 py-2 mx-2 {{ $filter === $category->slug ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">
+                        class="px-4 py-2 mx-2 my-1 {{ $filter === $category->slug ? 'bg-blue-600 text-white' : 'bg-gray-200' }}">
                         {{ $category->name }}
                     </button>
                 @endforeach
@@ -33,7 +33,11 @@
                             </div>
                             <div class="flex justify-between items-center my-2">
                                 <p class="font-bold uppercase">{{ $post->category->name }}</p>
+<<<<<<< HEAD
                                 <p>{{ $post->published_at }}</p>
+=======
+                                <p>{{ $post->published_at->format('Y-m-d') }}</p>
+>>>>>>> b453879a8407f54d841184c75bcc192cd9f3b209
                             </div>
                             <a class="hover:underline text-2xl text-gray-700 font-bold"
                                 href="{{ route('newsdetails', $post->id) }}">

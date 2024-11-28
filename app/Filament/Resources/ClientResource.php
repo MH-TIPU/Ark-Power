@@ -71,8 +71,6 @@ class ClientResource extends Resource
                     ->label('Category')
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('url')
-                    ->label('URL'),
             ])
             ->filters([
                 //

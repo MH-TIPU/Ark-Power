@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('main-content')
-    <div class="min-h-screen">
+    <div class="min-h-screen mb-10">
         <div class="md:mt-24 mt-14 w-full max-w-screen-xl mx-auto p-5">
             <div class="mb-10">
                 <h1 class="text-primary text-center font-semibold md:text-5xl text-3xl uppercase">News</h1>
@@ -15,8 +15,13 @@
                             </div>
                             <div class="flex justify-between items-center my-6">
                                 <p class="font-bold uppercase">{{ $data->category->name }}</p>
+<<<<<<< HEAD
                                 <p>{{ $data->published_at }}</p>
 
+=======
+                                <p>{{ $data->published_at->format('Y-m-d') }}</p>
+                                
+>>>>>>> b453879a8407f54d841184c75bcc192cd9f3b209
                             </div>
 
                             <h1 class="text-2xl md:text-5xl  font-semibold mb-8">{{ $data->title }}</h1>
@@ -29,7 +34,7 @@
                     @if ($relatedNews->isNotEmpty())
                         @foreach ($relatedNews as $news)
                             <div class="border bg-white p-2 mb-3">
-                                <div class="relative h-44 overflow-hidden">
+                                <div class="relative h-28 overflow-hidden">
                                     <img src="{{ asset('storage/' . $news->featured_image) }}" alt="{{ $news->title }}"
                                         class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
                                 </div>

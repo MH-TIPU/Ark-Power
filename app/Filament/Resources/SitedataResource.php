@@ -121,14 +121,17 @@ class SitedataResource extends Resource
 
                 Textarea::make('about')
                     ->label('About')
+                    ->columnSpan(2)
                     ->nullable(),
 
                 Textarea::make('mission')
                     ->label('Mission')
+                    ->columnSpan(2)
                     ->nullable(),
 
                 Textarea::make('vision')
                     ->label('Vision')
+                    ->columnSpan(2)
                     ->nullable(),
             ]);
     }

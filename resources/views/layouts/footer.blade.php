@@ -3,15 +3,17 @@
 
 
 <footer class="relative bg-cover bg-center" style="background-image: url('{{ asset('img/bg_h_1.jpg') }}');">
-    <div className="absolute bg-black/80"></div>
-    <div class="releted text-white bg-black/50 backdrop-blur-sm text-sm">
+    {{-- <div className="absolute bg-black/80">
+    </div> --}}
+    <div class="releted text-white bg-black/70 backdrop-blur-sm text-sm">
         <div class="grid md:grid-cols-4 grid-cols-1 py-10 px-5 md:gap-5 w-full max-w-screen-xl p-5 mx-auto">
-            <div>
-                @if (!empty($siteData->white_logo))
-                    <img class="" src="{{ asset('storage/' . $siteData->white_logo) }}" alt="ARK Power Ltd.">
+            <div class="flex flex-col mt-2">
+                @if (!empty($siteData->logo))
+                    <img class="h-12 w-auto" src="{{ asset('storage/' . $siteData->logo) }}" alt="ARK Power Ltd.">
                 @else
                     <span class="text-red-500 font-semibold">Logo not set</span>
                 @endif
+                
                 <div class="text-center my-4">
                     <p>Follow us: </p>
                     <div class="flex justify-center items-center gap-3 mt-2">
@@ -64,14 +66,13 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-2 md:my-0 my-5 col-span-2">
+            <div class="grid grid-cols-2 my-5 md:my-0  col-span-2">
                 <div class="md:ps-10">
                     <h1 class="text-xl font-bold uppercase opacity-80 pb-3">Quick Link</h1>
                     <ul class="space-y-2">
                         <li><a href="/">Home</a></li>
                         <li><a href="{{ route('about') }}">About us</a></li>
                         <li><a href="{{ route('products') }}">Our Products</a></li>
-                        <li><a href="#">Our Clients</a></li>
                         <li><a href="{{ route('contact') }}">Contact Us</a></li>
                         <li><a href="{{ route('termcondition') }}">Terms & Conditions</a></li>
                     </ul>
@@ -132,7 +133,7 @@
                             News &amp; Offers</p>
                     </li>
                     <li>
-                        <div class="flex items-center">
+                        <div class="flex items-center justify-center md:justify-start">
                             <input type="email" id="subscriber" name="subscriber" placeholder="Enter Your Email"
                                 class="p-2 border border-black rounded-l-md text-black" />
                             <button type="submit"

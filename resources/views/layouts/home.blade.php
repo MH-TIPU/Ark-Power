@@ -13,7 +13,7 @@
                     {{ $siteData->tagLine ?? 'Leading the way in power protection, generation, and innovation across Bangladesh.' }}
                 </p>
                 <div>
-                    <a href="/about-us">
+                    <a href="{{ route('about') }}">
                         <button
                             class="btn-primary mt-5 md:mb-0 mb-10 text-black text-blod text-lg bg-slate-100 p-2 rounded-lg">About
                             Us</button>
