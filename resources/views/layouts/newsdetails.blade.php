@@ -15,13 +15,8 @@
                             </div>
                             <div class="flex justify-between items-center my-6">
                                 <p class="font-bold uppercase">{{ $data->category->name }}</p>
-<<<<<<< HEAD
-                                <p>{{ $data->published_at }}</p>
-
-=======
                                 <p>{{ $data->published_at->format('Y-m-d') }}</p>
-                                
->>>>>>> b453879a8407f54d841184c75bcc192cd9f3b209
+
                             </div>
 
                             <h1 class="text-2xl md:text-5xl  font-semibold mb-8">{{ $data->title }}</h1>
