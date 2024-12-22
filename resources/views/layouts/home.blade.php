@@ -28,7 +28,10 @@
         const images = [
             'url("{{ asset('img/bg_h_1.jpg') }}")',
             'url("{{ asset('img/bg_h_2.jpg') }}")',
-            'url("{{ asset('img/bg_h_3.jpg') }}")'
+            'url("{{ asset('img/bg_h_3.jpg') }}")',
+            'url("{{ asset('img/bg_h_4.jpg') }}")',
+            'url("{{ asset('img/bg_h_5.jpg') }}")',
+            'url("{{ asset('img/bg_h_6.jpg') }}")'
         ];
 
         let currentImageIndex = 0;
