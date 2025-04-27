@@ -26,7 +26,7 @@
     <script>
         // JavaScript to rotate background images
         const images = [
-            'url("{{ asset('img/bg_h_1.jpg') }}")',
+            // 'url("{{ asset('img/bg_h_1.jpg') }}")',
             'url("{{ asset('img/bg_h_2.jpg') }}")',
             'url("{{ asset('img/bg_h_3.jpg') }}")',
             'url("{{ asset('img/bg_h_4.jpg') }}")',
