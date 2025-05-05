@@ -30,7 +30,7 @@
 
                 <a href="/" id="logo" class="font-bold text-2xl flex items-center gap-1">
                     @if (!empty($siteData->logo))
-                        <img src="{{ asset('storage/' . $siteData->logo) }}" alt="Logo" class="max-h-7 auto" />
+                        <img src="{{ asset('storage/' . $siteData->logo) }}" alt="Logo" class="max-h-8 auto" />
                     @else
                         <span class="text-red-500 font-semibold">Logo not set</span>
                     @endif
