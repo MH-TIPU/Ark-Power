@@ -64,9 +64,9 @@
                     </div>
                 </div>
                 <div class="space-y-5 p-5 md:p-10 rounded-lg shadow-lg">
-                    <h1 class="text-primary hidden md:block text-xl md:text-4xl text-[#19ADEE]">WELCOME TO <br> ARK POWER
-                        LIMITED</h1>
-                    <h2 class="text-primary ">WE SUPPORT ALL YOUR NEEDS!</h2>
+                    {{-- <h1 class="text-primary hidden md:block text-xl md:text-4xl text-[#19ADEE]">WELCOME TO <br> ARK POWER
+                        LIMITED</h1> --}}
+                    {{-- <h2 class="text-primary ">WE SUPPORT ALL YOUR NEEDS!</h2> --}}
                     <p class="leading-6 text-gray-700 ">Ark Power is a leading integrated Power,
                         Electronic &amp; communication technology company that develops, manufactures,
                         markets and sells the related equipments. The Company is dedicated to improving
