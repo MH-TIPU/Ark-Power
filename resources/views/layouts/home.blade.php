@@ -226,9 +226,14 @@
                         loop="true" autoplay-delay="3000" autoplay-disable-on-interaction="false">
                         @foreach ($affiliations as $affiliation)
                             <swiper-slide class="swiper-slide">
-                                <img src="{{ asset('storage/' . $affiliation->logo) }}" alt="Affiliation Logo"
-                                    class="w-24 h-24 object-contain">
+                                <a href="{{ $affiliation->url ?? '#' }}" target="_blank">
+                                    <img src="{{ asset('storage/' . $affiliation->logo) }}" alt="Affiliation Logo"
+                                        class="w-24 h-24 object-contain">
+                                </a>
                             </swiper-slide>
+
+                            
+
                         @endforeach
                     </swiper-container>
                 @else
