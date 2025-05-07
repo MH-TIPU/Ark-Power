@@ -9,7 +9,7 @@
         <div class="grid md:grid-cols-4 grid-cols-1 py-10 px-5 md:gap-5 w-full max-w-screen-xl p-5 mx-auto">
             <div class="flex flex-col mt-2">
                 @if (!empty($siteData->logo))
-                    <img class="h-auto w-auto" src="{{ asset('storage/' . $siteData->white_logo) }}" alt="ARK Power Ltd.">
+                    <img class=" " style="height: 30px; width: auto; src="{{ asset('storage/' . $siteData->white_logo) }}" alt="ARK Power Ltd.">
                 @else
                     <span class="text-red-500 font-semibold">Logo not set</span>
                 @endif
