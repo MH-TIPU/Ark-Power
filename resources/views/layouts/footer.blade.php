@@ -7,7 +7,7 @@
     </div> --}}
     <div class="releted text-white bg-black/70 backdrop-blur-sm text-sm">
         <div class="grid md:grid-cols-4 grid-cols-1 py-10 px-5 md:gap-5 w-full max-w-screen-xl p-5 mx-auto">
-            <div class="flex flex-col mt-2">
+            <div class="flex flex-col mt-2 text-center">
                 @if (!empty($siteData->logo))
                     <img class=" h-auto w-24 "  src="{{ asset('storage/' . $siteData->white_logo) }}" alt="ARK Power Ltd." >
                 @else
