@@ -14,7 +14,7 @@
                     <span class="text-red-500 font-semibold">Logo not set</span>
                 @endif
                 
-                <div class="text-center my-4">
+                <div class="text-left my-4">
                     <p>Follow us: </p>
                     <div class="flex justify-center items-center gap-3 mt-2">
                         @if (!empty($siteData->fbUrl))
