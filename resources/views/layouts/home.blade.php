@@ -20,6 +20,9 @@
                     </a>
                 </div>
             </div>
+
+
+
         </div>
     </div>
 
@@ -90,10 +93,17 @@
                 <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1  md:gap-10 gap-2 items-center text-center ">
                     <div
                         class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
+
+                        {{-- <div class="w-16 h-16 mb-5 overflow-hidden"><img
                                 class="w-full h-full object-cover transition-transform duration-700 transform"
                                 src="https://cdn-icons-png.freepik.com/512/5388/5388782.png" alt="Security System">
-                        </div>
+                        </div> --}}
+
+                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
+                            class="w-full h-full object-cover transition-transform duration-700 transform"
+                            src="{{ asset('img/service_img/secutity.png') }}" alt="Security System">
+                    </div>
+
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Security
                             System</h1>
                         <p class="text-center h-20">Advanced wireless cameras for seamless surveillance with audio-visual
@@ -109,11 +119,20 @@
                         <p class="text-center h-20">Eco-friendly solar power solutions, including pumps and panels, for
                             sustainable energy generation.</p>
                     </div>
+                    
                     <div
                         class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
+                        {{-- <div class="w-16 h-16 mb-5 overflow-hidden"><img
                                 class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://cdn-icons-png.flaticon.com/512/4824/4824945.png" alt="Transformer"></div>
+                                src="https://cdn-icons-png.flaticon.com/512/4824/4824945.png" alt="Transformer">
+                        </div> --}}
+
+
+                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
+                            class="w-full h-full object-cover transition-transform duration-700 transform"
+                            src="{{ asset('img/service_img/transformer.png') }}" alt="Transformer">
+                    </div>
+
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Transformer
                         </h1>
                         <p class="text-center h-20">Efficient transformers for electrical power distribution, ensuring
@@ -122,6 +141,8 @@
 
                         </p>
                     </div>
+
+
                     <div
                         class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
                         <div class="w-16 h-16 mb-5 overflow-hidden"><img
@@ -231,9 +252,6 @@
                                         class="w-24 h-24 object-contain">
                                 </a>
                             </swiper-slide>
-
-                            
-
                         @endforeach
                     </swiper-container>
                 @else
