@@ -88,9 +88,82 @@
 
         <div class="min-h-[70vh] flex items-center justify-center p-5 w-full max-w-screen-xl mx-auto">
             <div>
-                <h1 class="text-primary md:text-4xl text-2xl text-center my-10">Products and Services
-                </h1>
+                <h1 class="text-primary md:text-4xl text-2xl text-center my-10">Products and Services </h1>
                 <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1  md:gap-10 gap-2 items-center text-center ">
+
+
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            {{-- <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="https://static.thenounproject.com/png/2301592-200.png" alt="Data Center"> --}}
+
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/data_centre.png') }}" alt="Data Center">
+
+                        </div>
+                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Data Center
+                        </h1>
+                        <p class="text-center h-20">Customized data center setups with cutting-edge technologies for secure
+                            and
+                            efficient operations.</p>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+
+                            {{-- <img
+                                class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="https://icons.veryicon.com/png/o/construction-tools/equipment-2/ups-1.png"
+                                alt="UPS"> --}}
+
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/ups.jpg') }}" alt="UPS">
+
+                        </div>
+                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">UPS</h1>
+                        <p class="text-center h-20">Reliable online UPS systems for continuous power supply during outages,
+                            ensuring device safety.</p>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            {{-- <img
+                                class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="https://cdn-icons-png.flaticon.com/512/48/48860.png" alt="Communication Equipment"> --}}
+
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="https://cdn-icons-png.flaticon.com/512/48/48860.png" alt="Communication Equipment">
+
+                        </div>
+                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Communication
+                            Equipment</h1>
+                        <p class="text-center h-20">High-quality tools to enhance communication networks, ensuring optimal
+                            connectivity and performance.</p>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            {{-- <img
+                                class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="https://cdn5.vectorstock.com/i/1000x1000/35/29/power-voltage-regulator-icon-simple-vector-41053529.jpg"
+                                alt="Automatic Voltage Regulator"> --}}
+
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/auto_voltage.png') }}" alt="Automatic Voltage Regulator">
+
+                        </div>
+                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Automatic
+                            Voltage
+                            Regulator</h1>
+                        <p class="text-center h-20">Regulators maintaining consistent generator voltage for stable and
+                            efficient
+                            power delivery.</p>
+                    </div>
+
                     <div
                         class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
 
@@ -99,39 +172,48 @@
                                 src="https://cdn-icons-png.freepik.com/512/5388/5388782.png" alt="Security System">
                         </div> --}}
 
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                            class="w-full h-full object-cover transition-transform duration-700 transform"
-                            src="{{ asset('img/service_img/secutity.png') }}" alt="Security System">
-                    </div>
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/secutity.png') }}" alt="Security System">
+                        </div>
 
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Security
                             System</h1>
                         <p class="text-center h-20">Advanced wireless cameras for seamless surveillance with audio-visual
                             monitoring and data security.</p>
                     </div>
+
                     <div
                         class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            {{-- <img
                                 class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://cdn-icons-png.freepik.com/512/2114/2114385.png" alt="Solar System"></div>
+                                src="https://cdn-icons-png.freepik.com/512/2114/2114385.png" alt="Solar System"> --}}
+
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/solar.jpg') }}" alt="Solar System">
+
+                        </div>
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Solar System
                         </h1>
                         <p class="text-center h-20">Eco-friendly solar power solutions, including pumps and panels, for
                             sustainable energy generation.</p>
                     </div>
-                    
+
                     <div
                         class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        {{-- <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                                class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://cdn-icons-png.flaticon.com/512/4824/4824945.png" alt="Transformer">
-                        </div> --}}
 
 
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
+
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+
+                            {{-- <img
                             class="w-full h-full object-cover transition-transform duration-700 transform"
-                            src="{{ asset('img/service_img/transformer.png') }}" alt="Transformer">
-                    </div>
+                            src="https://cdn-icons-png.flaticon.com/512/4824/4824945.png" alt="Transformer"> --}}
+
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/transformer.png') }}" alt="Transformer">
+                        </div>
 
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Transformer
                         </h1>
@@ -145,99 +227,51 @@
 
                     <div
                         class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            {{-- <img
                                 class="w-full h-full object-cover transition-transform duration-700 transform"
                                 src="https://img.freepik.com/premium-vector/generator-icon-logo-vector-design-template_827767-4583.jpg"
-                                alt="Generator"></div>
+                                alt="Generator"> --}}
+
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/generator.png') }}" alt="Generator">
+
+                        </div>
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Generator</h1>
                         <p class="text-center h-20">Gas and diesel generators for diverse applications, providing
                             uninterrupted
                             power supply.</p>
                     </div>
-                    <div
-                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                                class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://static.thenounproject.com/png/2301592-200.png" alt="Data Center"></div>
-                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Data Center
-                        </h1>
-                        <p class="text-center h-20">Customized data center setups with cutting-edge technologies for secure
-                            and
-                            efficient operations.</p>
-                    </div>
-                    <div
-                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                                class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://icons.veryicon.com/png/o/construction-tools/equipment-2/ups-1.png"
-                                alt="UPS"></div>
-                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">UPS</h1>
-                        <p class="text-center h-20">Reliable online UPS systems for continuous power supply during outages,
-                            ensuring device safety.</p>
-                    </div>
-                    <div
-                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                                class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://cdn-icons-png.flaticon.com/512/48/48860.png" alt="Communication Equipment">
-                        </div>
-                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Communication
-                            Equipment</h1>
-                        <p class="text-center h-20">High-quality tools to enhance communication networks, ensuring optimal
-                            connectivity and performance.</p>
-                    </div>
-                    <div
-                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                                class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://cdn5.vectorstock.com/i/1000x1000/35/29/power-voltage-regulator-icon-simple-vector-41053529.jpg"
-                                alt="Automatic Voltage Regulator"></div>
-                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Automatic
-                            Voltage
-                            Regulator</h1>
-                        <p class="text-center h-20">Regulators maintaining consistent generator voltage for stable and
-                            efficient
-                            power delivery.</p>
-                    </div>
+
                 </div>
             </div>
         </div>
 
-        <div class="min-h-[70vh] flex items-center justify-center p-5 mt-10 w-full max-w-screen-xl mx-auto">
+        <div class="min-h-auto  flex items-center justify-center p-5 mt-10 w-full max-w-screen-xl mx-auto">
+
+            {{-- mannagment area  --}}
             <div>
-                <div class="grid md:grid-cols-2 gap-20">
-                    <div>
-                        <h1 class="text-2xl font-bold uppercase mb-7">News and event</h1>
-                        @if ($latestPosts->isNotEmpty())
-                            <div
-                                class="scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-slate-300 scrollbar-w-2 scrollbar-track-transparent overflow-y-auto h-[42vh] border rounded-lg space-y-4 pr-3">
-                                @foreach ($latestPosts as $news)
-                                    <a href="{{ route('newsdetails', $news->id) }}">
-                                        <div class="">
-                                            <div
-                                                class="flex items-center justify-between gap-5 border-b hover:text-[#00ADF2] ">
-                                                <h1 class="text-xl font-bold p-3">{{ $news->title }}</h1><svg
-                                                    stroke="currentColor" fill="currentColor" stroke-width="0"
-                                                    viewBox="0 0 448 512" class="text-2xl" height="1em" width="1em"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </a>
-                                @endforeach
-                            </div>
-                        @else
-                            <p class="text-center p-4">No news available at the moment.</p>
-                        @endif
-                    </div>
-                    @livewire('management-tabs')
-                </div>
-            </div>
-        </div>
+                <h1 class="text-primary md:text-4xl text-2xl text-center my-10">Management</h1>
 
+                @if ($managments->isNotEmpty())
+                    <div class="grid grid-cols-2 gap-4 items-center flex justify-center">
+                        @foreach ($managments->reverse() as $management)
+                            <div class="flex flex-col items-center">
+                                <img src="{{ asset('storage/' . $management->image) }}" alt="{{ $management->name }}"
+                                    class="w-24 h-24 rounded object-cover">
+                                <h2 class="text-lg font-bold mt-2">{{ $management->name }}</h2>
+                                <p class="text-sm text-gray-500">{{ $management->designation }}</p>
+                            </div>
+                        @endforeach
+                    </div>
+                @else
+                    <p class="text-center p-4">No management data available.</p>
+                @endif
+
+            </div>
+            {{-- end managment area  --}}
+        </div>
+    
         {{-- Affiliations --}}
         <div class="p-5 w-full max-w-screen-xl mx-auto">
             <div class="w-full max-w-screen-xl mx-auto">

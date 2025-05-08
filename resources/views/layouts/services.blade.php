@@ -77,85 +77,75 @@
 
         <div class="min-h-[70vh] flex items-center justify-center p-5 w-full max-w-screen-xl mx-auto my-10">
             <div>
+                
+
                 <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1  md:gap-10 gap-2 items-center text-center ">
-                    
-                    <div class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                                class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://cdn-icons-png.freepik.com/512/5388/5388782.png" alt="Security System">
+
+
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            {{-- <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="https://static.thenounproject.com/png/2301592-200.png" alt="Data Center"> --}}
+    
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/data_centre.png') }}" alt="Data Center">
+    
                         </div>
-                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Security
-                            System</h1>
-                        <p class="text-center h-20">Advanced wireless cameras for seamless surveillance with audio-visual
-                            monitoring and data security.</p>
-                    </div>
-
-                    <div class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                                class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://cdn-icons-png.freepik.com/512/2114/2114385.png" alt="Solar System"></div>
-                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Solar System
-                        </h1>
-                        <p class="text-center h-20">Eco-friendly solar power solutions, including pumps and panels, for
-                            sustainable energy generation.</p>
-                    </div>
-
-                    <div class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                                class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://cdn-icons-png.flaticon.com/512/4824/4824945.png" alt="Transformer"></div>
-                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Transformer
-                        </h1>
-                        <p class="text-center h-20">Efficient transformers for electrical power distribution, ensuring
-                            reliable
-                            energy management.
-
-                        </p>
-                    </div>
-                    <div class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                                class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://img.freepik.com/premium-vector/generator-icon-logo-vector-design-template_827767-4583.jpg"
-                                alt="Generator"></div>
-                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Generator</h1>
-                        <p class="text-center h-20">Gas and diesel generators for diverse applications, providing
-                            uninterrupted
-                            power supply.</p>
-                    </div>
-                    <div class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
-                                class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://static.thenounproject.com/png/2301592-200.png" alt="Data Center"></div>
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Data Center
                         </h1>
                         <p class="text-center h-20">Customized data center setups with cutting-edge technologies for secure
                             and
                             efficient operations.</p>
                     </div>
-                    <div class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
+    
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+    
+                            {{-- <img
                                 class="w-full h-full object-cover transition-transform duration-700 transform"
                                 src="https://icons.veryicon.com/png/o/construction-tools/equipment-2/ups-1.png"
-                                alt="UPS"></div>
+                                alt="UPS"> --}}
+    
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/ups.jpg') }}" alt="UPS">
+    
+                        </div>
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">UPS</h1>
                         <p class="text-center h-20">Reliable online UPS systems for continuous power supply during outages,
                             ensuring device safety.</p>
                     </div>
-                    <div class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
+    
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            {{-- <img
                                 class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="https://cdn-icons-png.flaticon.com/512/48/48860.png" alt="Communication Equipment"> --}}
+    
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
                                 src="https://cdn-icons-png.flaticon.com/512/48/48860.png" alt="Communication Equipment">
+    
                         </div>
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Communication
                             Equipment</h1>
                         <p class="text-center h-20">High-quality tools to enhance communication networks, ensuring optimal
                             connectivity and performance.</p>
                     </div>
-                    <div class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 mb-5 overflow-hidden"><img
+    
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            {{-- <img
                                 class="w-full h-full object-cover transition-transform duration-700 transform"
                                 src="https://cdn5.vectorstock.com/i/1000x1000/35/29/power-voltage-regulator-icon-simple-vector-41053529.jpg"
-                                alt="Automatic Voltage Regulator"></div>
+                                alt="Automatic Voltage Regulator"> --}}
+    
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/auto_voltage.png') }}" alt="Automatic Voltage Regulator">
+    
+                        </div>
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Automatic
                             Voltage
                             Regulator</h1>
@@ -163,8 +153,90 @@
                             efficient
                             power delivery.</p>
                     </div>
+    
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+    
+                        {{-- <div class="w-16 h-16 mb-5 overflow-hidden"><img
+                                class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="https://cdn-icons-png.freepik.com/512/5388/5388782.png" alt="Security System">
+                        </div> --}}
+    
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/secutity.png') }}" alt="Security System">
+                        </div>
+    
+                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Security
+                            System</h1>
+                        <p class="text-center h-20">Advanced wireless cameras for seamless surveillance with audio-visual
+                            monitoring and data security.</p>
+                    </div>
+    
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            {{-- <img
+                                class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="https://cdn-icons-png.freepik.com/512/2114/2114385.png" alt="Solar System"> --}}
+    
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/solar.jpg') }}" alt="Solar System">
+    
+                        </div>
+                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Solar System
+                        </h1>
+                        <p class="text-center h-20">Eco-friendly solar power solutions, including pumps and panels, for
+                            sustainable energy generation.</p>
+                    </div>
+    
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+    
+    
+    
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+    
+                            {{-- <img
+                            class="w-full h-full object-cover transition-transform duration-700 transform"
+                            src="https://cdn-icons-png.flaticon.com/512/4824/4824945.png" alt="Transformer"> --}}
+    
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/transformer.png') }}" alt="Transformer">
+                        </div>
+    
+                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Transformer
+                        </h1>
+                        <p class="text-center h-20">Efficient transformers for electrical power distribution, ensuring
+                            reliable
+                            energy management.
+    
+                        </p>
+                    </div>
+    
+    
+                    <div
+                        class="flex flex-col items-center p-4 justify-start hover:bg-gray-50 transition ease-in-out duration-300 transform hover:scale-105">
+                        <div class="w-16 h-16 mb-5 overflow-hidden">
+                            {{-- <img
+                                class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="https://img.freepik.com/premium-vector/generator-icon-logo-vector-design-template_827767-4583.jpg"
+                                alt="Generator"> --}}
+    
+                            <img class="w-full h-full object-cover transition-transform duration-700 transform"
+                                src="{{ asset('img/service_img/generator.png') }}" alt="Generator">
+    
+                        </div>
+                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Generator</h1>
+                        <p class="text-center h-20">Gas and diesel generators for diverse applications, providing
+                            uninterrupted
+                            power supply.</p>
+                    </div>
+    
                 </div>
             </div>
+
+            
         </div>
 
     </div>

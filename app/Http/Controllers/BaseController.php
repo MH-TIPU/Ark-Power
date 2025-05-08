@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Affiliation;
 use App\Models\Career;
+use App\Models\Management;
 use App\Models\Post;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -17,8 +18,10 @@ class BaseController extends Controller
         $siteData = Sitedata::first();
         $affiliations = Affiliation::all();
         $latestPosts = Post::orderBy('created_at', 'desc')->take(9)->get();
+        $managments = Management::orderBy('created_at', 'desc')->take(2)->get();
+        
 
-        return view('layouts.home', compact('siteData', 'latestPosts', 'affiliations'));
+        return view('layouts.home', compact('siteData', 'latestPosts', 'affiliations', 'managments'));
     }
 
     public function products()
