@@ -34,7 +34,17 @@
             'url("{{ asset('img/bg_h_3.jpg') }}")',
             'url("{{ asset('img/bg_h_4.jpg') }}")',
             'url("{{ asset('img/bg_h_5.jpg') }}")',
-            'url("{{ asset('img/bg_h_6.jpg') }}")'
+            'url("{{ asset('img/bg_h_6.jpg') }}")',
+            'url("{{ asset('img/bg_h_7.jpg') }}")',
+            'url("{{ asset('img/bg_h_8.jpg') }}")',
+            'url("{{ asset('img/bg_h_9.jpg') }}")',
+            'url("{{ asset('img/bg_h_10.jpg') }}")',
+            'url("{{ asset('img/bg_h_11.jpg') }}")',
+            'url("{{ asset('img/bg_h_12.jpg') }}")',
+            'url("{{ asset('img/bg_h_13.jpg') }}")'
+
+
+
         ];
 
         let currentImageIndex = 0;
@@ -275,7 +285,8 @@
         {{-- Affiliations --}}
         <div class="p-5 w-full max-w-screen-xl mx-auto">
             <div class="w-full max-w-screen-xl mx-auto">
-                <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1>
+                <h1 class="text-primary md:text-4xl text-2xl text-center my-10">Our Affiliations</h1>
+                {{-- <h1 class="text-2xl font-bold uppercase mb-7 text-center">Our Affiliations</h1> --}}
                 @if ($affiliations->isNotEmpty())
                     <swiper-container class="mySwiper" slides-per-view="6" space-between="10" free-mode="true"
                         loop="true" autoplay-delay="3000" autoplay-disable-on-interaction="false">
