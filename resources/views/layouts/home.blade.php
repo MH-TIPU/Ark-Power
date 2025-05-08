@@ -89,7 +89,7 @@
                         of Bangladesh.</p>
                     <div class="flex justify-center md:justify-start"><a
                             class="bg-blue-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-600 transition duration-300"
-                            href="/about-us">Learn More</a></div>
+                            href="/about">Learn More</a></div>
                 </div>
             </div>
         </div>
