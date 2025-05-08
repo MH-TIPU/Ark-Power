@@ -244,7 +244,7 @@
                                 alt="Generator"> --}}
 
                             <img class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="{{ asset('img/service_img/generator.png') }}" alt="Generator">
+                                src="{{ asset('img/service_img/Generator.png') }}" alt="Generator">
 
                         </div>
                         <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Generator</h1>
