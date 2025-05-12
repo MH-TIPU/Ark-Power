@@ -5,7 +5,7 @@
         <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Black shadow overlay -->
 
         <div class="w-full max-w-screen-xl mx-auto h-screen flex items-center relative z-10">
-            <div class="text-center md:text-left p-5 md:w-1/2 bg-transparent backdrop-blur-[1px]">
+            {{-- <div class="text-center md:text-left p-5 md:w-1/2 bg-transparent backdrop-blur-[1px]">
                 <p class="text-xl text-white">Welcome to</p>
                 <h1 class="my-3 text-[#19ADEE] md:text-5xl text-3xl md:font-bold font-semibold uppercase ">Ark Power Limited
                 </h1>
@@ -19,7 +19,7 @@
                             Us</button>
                     </a>
                 </div>
-            </div>
+            </div> --}}
 
 
 
@@ -30,13 +30,13 @@
         // JavaScript to rotate background images
         const images = [
             // 'url("{{ asset('img/bg_h_1.jpg') }}")',
-            'url("{{ asset('img/bg_h_2.jpg') }}")',
-            'url("{{ asset('img/bg_h_3.jpg') }}")',
-            'url("{{ asset('img/bg_h_4.jpg') }}")',
-            'url("{{ asset('img/bg_h_5.jpg') }}")',
-            'url("{{ asset('img/bg_h_6.jpg') }}")',
-            'url("{{ asset('img/bg_h_7.jpg') }}")',
+            // 'url("{{ asset('img/bg_h_2.jpg') }}")',
             'url("{{ asset('img/bg_h_8.jpg') }}")',
+            'url("{{ asset('img/bg_h_3.jpg') }}")',
+            // 'url("{{ asset('img/bg_h_4.jpg') }}")',
+            // 'url("{{ asset('img/bg_h_5.jpg') }}")',
+            // 'url("{{ asset('img/bg_h_6.jpg') }}")',
+            'url("{{ asset('img/bg_h_7.jpg') }}")',
             'url("{{ asset('img/bg_h_9.jpg') }}")',
             'url("{{ asset('img/bg_h_10.jpg') }}")',
             'url("{{ asset('img/bg_h_11.jpg') }}")',
