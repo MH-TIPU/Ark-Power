@@ -101,11 +101,11 @@
                                 <p>
                                     <span class="font-bold">Hot Line</span> <br>
                                     @if (!empty($siteData->phoneNumber))
-                                        Sales - {{ $siteData->phoneNumber }}<br>
+                                        Sales & Support - {{ $siteData->phoneNumber }}<br>
                                     @endif
 
                                     @if (!empty($siteData->phoneNumber2))
-                                        Support - {{ $siteData->phoneNumber2 }}
+                                        Phone - {{ $siteData->phoneNumber2 }}
                                     @endif
                                 </p>
                             </a></li>

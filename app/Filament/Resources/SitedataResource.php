@@ -83,7 +83,7 @@ class SitedataResource extends Resource
                     ->nullable(),
 
                 TextInput::make('phoneNumber')
-                    ->label('Phone Number Sales')
+                    ->label('Phone Number Sales and Support')
                     ->nullable(),
 
                  TextInput::make('phoneNumber2')

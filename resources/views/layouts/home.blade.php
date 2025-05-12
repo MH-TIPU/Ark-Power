@@ -145,13 +145,11 @@
                                 src="https://cdn-icons-png.flaticon.com/512/48/48860.png" alt="Communication Equipment"> --}}
 
                             <img class="w-full h-full object-cover transition-transform duration-700 transform"
-                                src="https://cdn-icons-png.flaticon.com/512/48/48860.png" alt="Communication Equipment">
+                                src="{{ asset('img/service_img/sub_station.jpg') }}" alt="Sub-Station Equipments">
 
                         </div>
-                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Communication
-                            Equipment</h1>
-                        <p class="text-center h-20">High-quality tools to enhance communication networks, ensuring optimal
-                            connectivity and performance.</p>
+                        <h1 class="text-lg md:text-xl lg:text-2xl  md:font-bold text-center mb-5 h-6 md:h-12">Sub-Station Equipments</h1>
+                        <p class="text-center h-20">Reliable equipment for stable power distribution, voltage control, and system protection.</p>
                     </div>
 
                     <div
