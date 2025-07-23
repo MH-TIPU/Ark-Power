@@ -32,7 +32,7 @@ class Products extends Component
         })
         ->where('status', 1) // Include only active products
         ->orderBy('sl', 'asc')
-        ->paginate(8);
+        ->paginate(12);
 
         return view('livewire.products', [
             'products' => $products,
