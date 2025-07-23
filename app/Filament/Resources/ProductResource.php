@@ -59,7 +59,6 @@ class ProductResource extends Resource
                 TextInput::make('sl')
                     ->label('Serial Number')
                     ->numeric()
-                    ->quique()
                     ->default(0)
                     ->minValue(0)
                     ->maxValue(999999)
