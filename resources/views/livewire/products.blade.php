@@ -20,9 +20,12 @@
                 @endforeach
             </div>
 
+           
+
             @if ($products->isNotEmpty())
 
                 <div class="grid lg:grid-cols-4 md:grid-cols-3 gap-10">
+                    
                     @foreach ($products as $product)
                         <div
                             class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md overflow-hidden p-1 border hover:shadow-xl">

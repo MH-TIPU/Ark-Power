@@ -16,6 +16,7 @@ class Product extends Model
         'status',
         'source_url',
         'source_name',
+        'sl'
     ];
 
     public function category()

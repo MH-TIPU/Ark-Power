@@ -56,6 +56,16 @@ class ProductResource extends Resource
 
                 TextInput::make('slug')->unique(ignorable: fn($record) => $record)->required(),
 
+                Textarea::make('sl')
+                    ->label('Serial Number')
+                    ->numeric()
+                    ->quique()
+                    ->default(0)
+                    ->minValue(0)
+                    ->maxValue(999999)
+                
+                    ->required(),
+
                 Textarea::make('description')
                     ->label('Description')
                     ->required(),
