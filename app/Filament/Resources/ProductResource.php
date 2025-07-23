@@ -56,7 +56,7 @@ class ProductResource extends Resource
 
                 TextInput::make('slug')->unique(ignorable: fn($record) => $record)->required(),
 
-                Textarea::make('sl')
+                TextInput::make('sl')
                     ->label('Serial Number')
                     ->numeric()
                     ->quique()
@@ -117,6 +117,11 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
+                TextColumn::make('sl')
+                    ->label('Serial Number')
+                    ->searchable()
+                    ->sortable(),
+
                 TextColumn::make('name')
                     ->label('Name')
                     ->searchable()
