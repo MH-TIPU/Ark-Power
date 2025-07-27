@@ -51,26 +51,28 @@ class CategoryResource extends Resource
                         if (($get('slug') ?? '') !== Str::slug($old)) {
                             return;
                         }
-    
+
                         $set('slug', Str::slug($state));
                     }),
-    
-                TextInput::make('slug')->unique(ignorable: fn ($record) => $record)->required(),
-                
+
+                TextInput::make('slug')->unique(ignorable: fn($record) => $record)->required(),
+                TextInput::make('sort_order')
+                    ->required()->numeric()->default(0),
+
                 Textarea::make('description')
                     ->label('Description')
                     ->nullable(),
 
 
                 FileUpload::make('image')
-                ->label('Product Category Image')
+                    ->label('Product Category Image')
                     ->image()
                     ->maxSize(6000)
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('product_category_');
                         return $uniqueId . '.' . $file->getClientOriginalExtension();
-                    }), 
-                
+                    }),
+
             ]);
     }
 
@@ -78,6 +80,10 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
+                TextColumn::make('sort_order')
+                    ->label('Sort Order')
+                    ->sortable()
+                    ->searchable(),
                 TextColumn::make('name')
                     ->label('Name')
                     ->searchable()
