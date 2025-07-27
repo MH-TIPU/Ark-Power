@@ -23,8 +23,8 @@ class Products extends Component
 
     public function render()
     {
-        // Fetch all categories
-        $categories = Category::all();
+        // Fetch all categories ordered by sort_order
+        $categories = Category::orderBy('sort_order', 'asc')->get();
 
         // Filter products based on selected category
         $products = Product::when($this->selectedCategory, function ($query) {

@@ -17,15 +17,20 @@ class AdminUserSeeder extends Seeder
     public function run(): void
     {
         $user = User::firstOrCreate(
-            ['email' => 'admin@example.com'],
+            ['email' => 'admin@arkpower.com'],
             [
-                'name' => 'Admin',
-                'password' => bcrypt('password'),
+                'name' => 'Super Admin',
+                'password' => bcrypt('admin123'),
+                'email_verified_at' => now(),
             ]
         );
 
         $role = Role::firstOrCreate(['name' => 'Super Admin']);
         $role->syncPermissions(Permission::all());
         $user->assignRole($role);
+
+        $this->command->info('Super Admin user created successfully!');
+        $this->command->info('Email: admin@arkpower.com');
+        $this->command->info('Password: admin123');
     }
 }

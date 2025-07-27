@@ -12,6 +12,7 @@ class Category extends Model
         'slug',
         'description',
         'image',
+        'sort_order',
     ];
 
     public function products()
