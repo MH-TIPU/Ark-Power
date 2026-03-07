@@ -49,7 +49,8 @@ class ManagementResource extends Resource
                 FileUpload::make('image')
                     ->label('Femanagement Image')
                     ->image()
-                    ->maxSize(6000)
+                    ->maxSize(2048)
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                     ->required()
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('management_images');

@@ -51,6 +51,8 @@ class ClientResource extends Resource
                     ->label('Client logo')
                     ->image()
                     ->required()
+                    ->maxSize(2048)
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('client_logos');
                         return $uniqueId . '.' . $file->getClientOriginalExtension();

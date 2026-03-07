@@ -48,7 +48,8 @@ class AffiliationResource extends Resource
                     ->label('Affiliation logo')
                     ->image()
                     ->required()
-                    ->maxSize(6000)
+                    ->maxSize(2048)
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('affiliation_logos');
                         return $uniqueId . '.' . $file->getClientOriginalExtension();

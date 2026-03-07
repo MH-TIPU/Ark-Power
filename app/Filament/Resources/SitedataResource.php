@@ -40,7 +40,7 @@ class SitedataResource extends Resource
                 TextInput::make('siteName')
                     ->label('Site Name')
                     ->required(),
-                
+
                 TextInput::make('tagLine')
                     ->label('Tagline')
                     ->nullable(),
@@ -49,7 +49,8 @@ class SitedataResource extends Resource
                     ->label('Logo')
                     ->image()
                     ->required()
-                    ->maxSize(6000)
+                    ->maxSize(2048)
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                     // ->directory('logos')
                     ->getUploadedFileNameForStorageUsing(function ($file) {
                         $uniqueId = uniqid('logo_');
@@ -59,7 +60,8 @@ class SitedataResource extends Resource
                 FileUpload::make('white_logo')
                     ->label('Footer Logo')
                     ->image()
-                    ->maxSize(6000)
+                    ->maxSize(2048)
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                     ->required()
                     // ->directory('logos')
                     ->getUploadedFileNameForStorageUsing(function ($file) {
@@ -70,7 +72,8 @@ class SitedataResource extends Resource
                 FileUpload::make('favIcon')
                     ->label('Favicon')
                     ->image()
-                    ->maxSize(6000)
+                    ->maxSize(2048)
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                     ->nullable()
                     // ->directory('favIcons')
                     ->getUploadedFileNameForStorageUsing(function ($file) {
@@ -86,7 +89,7 @@ class SitedataResource extends Resource
                     ->label('Phone Number Sales and Support')
                     ->nullable(),
 
-                 TextInput::make('phoneNumber2')
+                TextInput::make('phoneNumber2')
                     ->label('Phone Number Support')
                     ->nullable(),
 
@@ -141,7 +144,7 @@ class SitedataResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('siteName')->label('Site Name'),
-                
+
                 TextColumn::make('email')->label('Email'),
                 TextColumn::make('phoneNumber')->label('Phone Number'),
             ])
@@ -173,7 +176,7 @@ class SitedataResource extends Resource
             // 'create' => Pages\CreateSitedata::route('/create'),
             // 'edit' => Pages\EditSitedata::route('/{record}/edit'),
         ];
-    
+
     }
 
 
