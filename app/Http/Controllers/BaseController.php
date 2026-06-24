@@ -89,7 +89,7 @@ class BaseController extends Controller
         $siteData = Sitedata::first();
         $careers = Career::with('category') // Eager load the category relationship
             ->where('is_active', 1) // Only retrieve active careers
-            ->where('deadline', '>=', Carbon::now()) // Only careers with a valid deadline
+            ->where('deadline', '>=', Carbon::today()) // Only careers with a valid deadline
             ->get();
         return view('layouts.career', compact('siteData', 'careers'));
     }
@@ -109,7 +109,7 @@ class BaseController extends Controller
                 $latestPosts = Career::where('career_category_id', $career->career_category_id)
                     ->where('id', '!=', $id) // Exclude the current job post
                     ->where('is_active', 1) // Only retrieve active posts
-                    ->where('deadline', '>=', Carbon::now()) // Only careers with a valid deadline
+                    ->where('deadline', '>=', Carbon::today()) // Only careers with a valid deadline
                     ->latest()
                     ->take(2)
                     ->get();
